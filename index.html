@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dupa Keraton — Mockup (3 arah + rekomendasi)</title>
+<meta name="description" content="Tiga arah desain mockup untuk Dupa Keraton, dibandingkan berdampingan.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#15110D;--surface:#1D1712;--line:rgba(198,161,91,.24);--gold:#C6A15B;--cream:#F2E9DA;--muted:#B7A78F;--display:"Fraunces",Georgia,serif;--sans:"Plus Jakarta Sans",system-ui,sans-serif}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:clamp(24px,5vw,64px) clamp(18px,4vw,40px) 80px}
+header{padding-block:clamp(20px,5vw,52px) clamp(24px,4vw,40px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+.brand b{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+h1{font-family:var(--display);font-weight:300;font-size:clamp(34px,5.2vw,62px);line-height:1.02;letter-spacing:-.02em;max-width:18ch}
+h1 em{font-style:italic;color:var(--gold)}
+.lead{margin-top:18px;color:var(--muted);font-size:15px;max-width:62ch;line-height:1.8}
+.rec{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.rec div{border:1px solid var(--line);padding:14px 16px;border-radius:2px}
+.rec b{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:6px}
+.rec span{font-size:12.5px;color:var(--cream)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px);margin-top:clamp(32px,5vw,56px)}
+.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:0;margin-top:clamp(30px,4.5vw,48px);background:var(--surface);border:1px solid rgba(198,161,91,.45);border-radius:2px;overflow:hidden}
+.feature__shot{position:relative;min-height:320px;border-right:1px solid var(--line);overflow:hidden}
+.feature__shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.feature__body{padding:clamp(22px,3vw,38px);display:flex;flex-direction:column;gap:12px;justify-content:center}
+.feature__tag{display:inline-flex;align-self:flex-start;background:var(--gold);color:#1A1206;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px}
+.feature h2{font-family:var(--display);font-size:clamp(26px,3vw,36px);font-weight:400;line-height:1.12;letter-spacing:-.01em}
+.feature h2 em{font-style:italic;color:var(--gold)}
+.feature p{font-size:13.5px;color:var(--muted);line-height:1.75;max-width:52ch}
+.feature ul{list-style:none;display:grid;gap:6px;margin-top:2px}
+.feature li{font-size:12.5px;color:var(--cream);display:flex;gap:8px}
+.feature li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:7px;flex:0 0 auto}
+.feature .card__open{margin-top:8px;padding-top:0}
+@media (max-width:860px){.feature{grid-template-columns:1fr}.feature__shot{min-height:0;aspect-ratio:4/3;border-right:0;border-bottom:1px solid var(--line)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-3px);border-color:rgba(198,161,91,.5)}
+.card__shot{position:relative;aspect-ratio:3/4;overflow:hidden;background:#0F0C09;border-bottom:1px solid var(--line)}
+.card__shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.card__body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card__no{font-size:10px;letter-spacing:.22em;color:var(--gold)}
+.card h2{font-family:var(--display);font-size:24px;font-weight:400;line-height:1.15;letter-spacing:.01em}
+.card p{font-size:12.5px;color:var(--muted);line-height:1.7}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.tags span{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:4px 8px;border-radius:2px;color:var(--muted)}
+.card__open{margin-top:auto;padding-top:14px;display:flex;gap:8px}
+.btn{flex:1;display:inline-flex;align-items:center;justify-content:center;height:42px;border-radius:2px;font-size:11px;letter-spacing:.1em;font-weight:500;transition:.2s}
+.btn--gold{background:var(--gold);color:#1A1206}
+.btn--gold:hover{background:#E7CB9B}
+.btn--ghost{border:1px solid var(--line);color:var(--cream)}
+.btn--ghost:hover{border-color:var(--gold);color:var(--gold)}
+.pair{margin-top:clamp(40px,6vw,72px)}
+.pair h2{font-family:var(--display);font-size:clamp(24px,3vw,34px);font-weight:300;letter-spacing:-.01em;margin-bottom:16px}
+.pair h2 em{font-style:italic;color:var(--gold)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500}
+td:first-child{color:var(--muted);width:22%}
+.note{margin-top:36px;border-top:1px solid var(--line);padding-top:20px;font-size:12.5px;color:var(--muted);line-height:1.85;max-width:80ch}
+.note b{color:var(--cream);font-weight:500}
+@media (max-width:860px){.grid,.rec{grid-template-columns:1fr}.card__shot{aspect-ratio:16/10}.card__shot img{object-position:top}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><img src="assets/logo.jpg" alt=""><b>Dupa Keraton &middot; Mockup</b></div>
+    <h1>Tiga arah desain, <em>satu brand</em></h1>
+    <p class="lead">Semua memakai foto produk, logo, nama varian, dan harga dari katalog klien. Tiap arah mengambil kutub desain yang berbeda — bukan tiga versi dari tampilan yang sama. Di bawah ini ada <strong style="color:var(--cream);font-weight:500">arah 04</strong>, gabungan yang saya rekomendasikan.</p>
+    <div class="rec">
+      <div><b>01 Keraton Heritage</b><span>Mewah, gelap, berwibawa. Paling kuat untuk reseller &amp; ekspor.</span></div>
+      <div><b>02 Editorial Ivory</b><span>Bersih, tajam, seperti katalog seni. Paling kuat untuk pasar premium baru.</span></div>
+      <div><b>03 Ritual Nusantara</b><span>Hangat dan bercerita. Paling kuat untuk pembeli langsung &amp; medsos.</span></div>
+    </div>
+  </header>
+
+  <section class="feature">
+    <div class="feature__shot"><img src="preview/04-desktop.jpg" alt="Pratinjau varian 04, gabungan rekomendasi"></div>
+    <div class="feature__body">
+      <span class="feature__tag">Rekomendasi &middot; arah 04</span>
+      <h2>Gabungan: <em>Keraton Heritage</em> + indeks 02 + modal 03</h2>
+      <p>Fondasi visual dari arah 01, katalog diganti indeks aroma interaktif dari arah 02, dan pemesanan memakai lembar pesanan dari arah 03. Satu halaman, tiga kekuatan.</p>
+      <ul>
+        <li>Hero arch, emas di atas hitam, toggle ID/EN</li>
+        <li>Indeks aroma: hover/ketuk nama, gambar besar berganti</li>
+        <li>Modal pesanan: varian + jumlah, total langsung, lanjut ke WhatsApp</li>
+        <li>Tab Dupa Lanus dengan harga reseller</li>
+      </ul>
+      <div class="card__open">
+        <a class="btn btn--gold" href="04-rekomendasi/index.html">Buka mockup 04</a>
+        <a class="btn btn--ghost" href="preview/04-desktop.jpg" target="_blank" rel="noopener">Pratinjau</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card__shot"><img src="preview/01-desktop.jpg" alt="Pratinjau varian 01 Keraton Heritage"></div>
+      <div class="card__body">
+        <span class="card__no">ARAH 01</span>
+        <h2>Keraton Heritage</h2>
+        <p>Hitam hangat, emas, ornamen lengkung seperti logo. Hero berbingkai arch, katalog gelap, panel reseller/ekspor, dan tombol bahasa ID/EN.</p>
+        <div class="tags"><span>Dark luxe</span><span>B2B</span><span>ID/EN</span></div>
+        <div class="card__open">
+          <a class="btn btn--gold" href="01-keraton-heritage/index.html">Buka mockup</a>
+          <a class="btn btn--ghost" href="preview/01-desktop.jpg" target="_blank" rel="noopener">Pratinjau</a>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card__shot"><img src="preview/02-desktop.jpg" alt="Pratinjau varian 02 Editorial Ivory"></div>
+      <div class="card__body">
+        <span class="card__no">ARAH 02</span>
+        <h2>Editorial Ivory</h2>
+        <p>Kertas gading, tipografi serif besar, garis rambut, radius tajam. Indeks aroma interaktif: arahkan nama varian, gambarnya berganti. Ada lembar pesanan yang menyusun pesan WhatsApp.</p>
+        <div class="tags"><span>Editorial</span><span>Interaktif</span><span>Tajam</span></div>
+        <div class="card__open">
+          <a class="btn btn--gold" href="02-editorial-ivory/index.html">Buka mockup</a>
+          <a class="btn btn--ghost" href="preview/02-desktop.jpg" target="_blank" rel="noopener">Pratinjau</a>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card__shot"><img src="preview/03-desktop.jpg" alt="Pratinjau varian 03 Ritual Nusantara"></div>
+      <div class="card__body">
+        <span class="card__no">ARAH 03</span>
+        <h2>Ritual Nusantara</h2>
+        <p>Terracotta, pasir, dan krem. Satu section satu adegan, bab varian bergambar, band Dupa Lanus gelap, dan modal pesanan yang langsung menyiapkan chat WhatsApp.</p>
+        <div class="tags"><span>Storytelling</span><span>Hangat</span><span>Mobile-first</span></div>
+        <div class="card__open">
+          <a class="btn btn--gold" href="03-ritual-nusantara/index.html">Buka mockup</a>
+          <a class="btn btn--ghost" href="preview/03-desktop.jpg" target="_blank" rel="noopener">Pratinjau</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <section class="pair">
+    <h2>Perbandingan <em>cepat</em></h2>
+    <table>
+      <thead><tr><th>Aspek</th><th>01 Keraton Heritage</th><th>02 Editorial Ivory</th><th>03 Ritual Nusantara</th></tr></thead>
+      <tbody>
+        <tr><td>Kesan</td><td>Mewah, berwibawa, eksklusif</td><td>Tenang, cerdas, seperti galeri</td><td>Hangat, personal, bercerita</td></tr>
+        <tr><td>Warna</td><td>Hitam hangat + emas + krem</td><td>Gading + tinta + perunggu</td><td>Terracotta + pasir + krem</td></tr>
+        <tr><td>Tipografi</td><td>Fraunces + Plus Jakarta Sans</td><td>Instrument Serif + Plus Jakarta Sans</td><td>Cormorant Garamond + Plus Jakarta Sans</td></tr>
+        <tr><td>Kekuatan</td><td>Kredibilitas reseller &amp; ekspor</td><td>Katalog aroma terasa mahal</td><td>Kedekatan dengan pembeli langsung</td></tr>
+        <tr><td>Interaksi</td><td>Tab koleksi, toggle ID/EN</td><td>Indeks hover + lembar pesanan</td><td>Modal pesanan per varian</td></tr>
+        <tr><td>Risiko</td><td>Bisa terasa berat untuk pembeli satuan</td><td>Terlalu sunyi jika foto sedikit</td><td>Kurang formal untuk distributor besar</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <p class="note">
+    <b>Rekomendasi:</b> bangun dari <b>arah 04</b> — fondasi visual 01, indeks aroma 02, lembar pesanan 03.
+    Ia menjaga kesan "keraton" sekaligus memudahkan pembeli memilih aroma dan memesan dalam dua klik.
+    Semua mockup memakai nomor WhatsApp dari materi klien (+62 851-5520-3672).
+    Yang masih perlu dilengkapi pemilik: alamat, e-mail resmi, akun media sosial, foto kemasan Maharaja dan lini Lanus, serta konfirmasi nama "Melati" vs "Melati Jawa" pada kemasan.
+  </p>
+</div>
+</body>
+</html>

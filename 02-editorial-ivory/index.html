@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="id" data-radius="sharp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dupa Keraton — Indeks Aroma Nusantara</title>
+<meta name="description" content="Dupa Keraton: delapan karakter aroma warisan Nusantara dalam kemasan siap hadiah. Eceran, reseller, dan pengiriman internasional.">
+<meta name="page-type" content="product">
+<meta name="site-kind" content="other">
+<meta name="theme-color" content="#F7F3EB">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#F7F3EB;
+  --paper-2:#EFE8DA;
+  --ink:#17130E;
+  --ink-soft:#3B332A;
+  --muted:#7C7365;
+  --bronze:#9A7639;
+  --line:#D9CFBD;
+  --line-soft:rgba(23,19,14,.10);
+  --display:"Instrument Serif",Georgia,serif;
+  --sans:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --wrap:1320px;
+  --pad:clamp(20px,4.4vw,56px);
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+.eyebrow{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--bronze);font-weight:500}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:16px;top:-60px;z-index:200;background:var(--ink);color:var(--paper);padding:10px 16px;font-size:13px;transition:top .2s}
+.skip:focus{top:12px}
+.hair{height:1px;background:var(--line);border:0}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto;z-index:100;background:rgba(247,243,235,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft);transition:background .3s}
+.hd__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:66px;max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:30px;height:30px;object-fit:cover;border-radius:50%;border:1px solid var(--line)}
+.brand b{font-family:var(--display);font-size:19px;font-weight:400;letter-spacing:.01em}
+.brand span{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);display:block;margin-top:-2px}
+.nav{display:flex;gap:32px}
+.nav a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);position:relative;padding-block:4px}
+.nav a::after{content:"";position:absolute;inset:auto 0 0;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.nav a:hover::after{transform:scaleX(1)}
+.hd__cta{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding-bottom:3px;border-bottom:1px solid var(--ink);transition:gap .25s,opacity .25s}
+.hd__cta:hover{gap:14px;opacity:.7}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid var(--line)}
+.burger span{width:16px;height:1px;background:var(--ink);position:relative;display:block}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:16px;height:1px;background:var(--ink)}
+.burger span::before{top:-5px}.burger span::after{top:5px}
+
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:118px 44px;position:relative}
+.hero__top{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,4.6vw,68px);align-items:start}
+.hero__meta{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);padding-bottom:16px;border-bottom:1px solid var(--line)}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(42px,6.2vw,94px);line-height:.93;letter-spacing:-.03em;margin:24px 0 0;max-width:12ch}
+.hero h1 em{font-style:italic;color:var(--bronze)}
+.hero__copy>p.lead{font-size:16px;line-height:1.8;color:#2B241C;max-width:44ch;margin-top:22px}
+.hero__acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(26px,4vh,44px);border-top:1px solid var(--line);padding-top:16px;max-width:660px}
+.facts b{display:block;font-family:var(--display);font-size:23px;font-weight:400;letter-spacing:-.01em;line-height:1.2}
+.facts span{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:50px;padding:0 24px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;border:1px solid var(--ink);transition:background .25s,color .25s,transform .18s}
+.btn--solid{background:var(--ink);color:var(--paper)}
+.btn--solid:hover{background:#2C241B;transform:translateY(-1px)}
+.btn--line:hover{background:var(--ink);color:var(--paper);transform:translateY(-1px)}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:14px;height:14px}
+.hero__figure{position:relative;margin-top:8px}
+.hero__figure .frame{position:absolute;inset:12px -12px -12px 12px;border:1px solid var(--line);z-index:0}
+.hero__figure img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line-soft)}
+.hero__figure .tag{position:absolute;z-index:2;left:-14px;bottom:26px;background:var(--paper);border:1px solid var(--line);padding:10px 14px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+[data-enter]{opacity:0;transform:translateY(14px);animation:enter .85s cubic-bezier(.2,.7,.2,1) forwards}
+[data-enter="2"]{animation-delay:.1s}
+[data-enter="3"]{animation-delay:.2s}
+[data-enter="4"]{animation-delay:.3s}
+@keyframes enter{to{opacity:1;transform:none}}
+
+/* section shell */
+.sec{padding-block:clamp(72px,8vh,110px);min-height:100svh;display:flex;align-items:center}
+.sec__in{width:100%}
+.sec-label{display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:1px solid var(--ink);padding-top:14px;margin-bottom:clamp(28px,4vw,52px)}
+.sec-label h2{font-family:var(--display);font-size:clamp(28px,3.2vw,42px);font-weight:400;letter-spacing:-.015em;line-height:1.1}
+.sec-label p{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+/* index */
+.index{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,72px);align-items:start}
+.idx-list{border-top:1px solid var(--line)}
+.idx-row{width:100%;display:grid;grid-template-columns:34px 1fr auto;gap:16px;align-items:center;padding:clamp(13px,1.8vh,19px) 8px;border-bottom:1px solid var(--line);text-align:left;transition:padding .3s,background .3s;position:relative}
+.idx-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--bronze);transform:scaleY(0);transform-origin:top;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.idx-row em{font-family:var(--display);font-style:normal;font-size:13px;color:var(--muted)}
+.idx-row .nm{font-family:var(--display);font-size:clamp(21px,2.4vw,30px);font-weight:400;letter-spacing:-.01em;line-height:1.15;transition:color .25s}
+.idx-row .nt{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px;font-weight:400}
+.idx-row .pr{font-size:12px;letter-spacing:.04em;color:var(--ink-soft);white-space:nowrap;text-align:right}
+.idx-row .pr span{display:block;font-size:10px;color:var(--muted);margin-top:2px;letter-spacing:.02em}
+.idx-row:hover{padding-left:16px;background:var(--paper-2)}
+.idx-row:hover .nm{color:var(--bronze)}
+.idx-row[aria-current="true"]{padding-left:16px}
+.idx-row[aria-current="true"]::before{transform:scaleY(1)}
+.idx-row[aria-current="true"] .nm{color:var(--bronze)}
+.idx-panel{position:sticky;top:96px}
+.idx-panel__photo{position:relative;border:1px solid var(--line);background:var(--paper-2);aspect-ratio:4/5;overflow:hidden}
+.idx-panel__photo img{width:100%;height:100%;object-fit:cover;transition:opacity .35s ease,transform .9s ease}
+.idx-panel__photo img.is-fading{opacity:0;transform:scale(1.015)}
+.idx-panel__no{position:absolute;top:12px;left:12px;background:rgba(247,243,235,.9);padding:5px 9px;font-size:9px;letter-spacing:.2em;color:var(--ink-soft)}
+.idx-panel__info{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding-top:14px;border-top:1px solid var(--line);margin-top:14px}
+.idx-panel__info h3{font-family:var(--display);font-size:26px;font-weight:400;letter-spacing:-.01em}
+.idx-panel__info .notes{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:right}
+.idx-note{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+
+/* philosophy */
+.phil{background:var(--paper-2);border-block:1px solid var(--line)}
+.phil .wrap{max-width:1040px}
+.phil blockquote{font-family:var(--display);font-size:clamp(28px,4.2vw,54px);line-height:1.16;letter-spacing:-.02em;font-weight:400;text-align:center;margin-block:clamp(24px,4vh,44px)}
+.phil blockquote em{font-style:italic;color:var(--bronze)}
+.phil p.lead{text-align:center;font-size:15px;color:var(--ink-soft);max-width:62ch;margin:0 auto;line-height:1.85}
+.phil__cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);margin-top:clamp(34px,6vh,64px);border-top:1px solid var(--line);padding-top:26px}
+.phil__cols h3{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);font-weight:500}
+.phil__cols p{font-size:13.5px;color:var(--ink-soft);line-height:1.8;margin-top:10px}
+
+/* lanus */
+.lanus__table{border-top:1px solid var(--ink)}
+.lr{display:grid;grid-template-columns:44px 1.2fr 1.4fr auto;align-items:baseline;gap:18px;padding-block:clamp(15px,2.2vh,22px);border-bottom:1px solid var(--line)}
+.lr em{font-family:var(--display);font-style:normal;font-size:12px;color:var(--muted)}
+.lr h3{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,31px);letter-spacing:-.01em}
+.lr .notes{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.lr .price{font-size:13px;text-align:right;white-space:nowrap}
+.lr .price span{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.lanus__foot{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center;margin-top:30px}
+.lanus__foot p{font-size:13.5px;color:var(--ink-soft);max-width:58ch;line-height:1.75}
+
+/* order */
+.order{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.order h2{font-family:var(--display);font-size:clamp(32px,4.2vw,54px);font-weight:400;line-height:1.04;letter-spacing:-.025em;margin-top:14px;max-width:13ch}
+.order h2 em{font-style:italic;color:var(--bronze)}
+.order>div>p{color:var(--ink-soft);font-size:15px;line-height:1.8;margin-top:18px;max-width:44ch}
+.order__contact{margin-top:32px;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:12px;font-size:13px}
+.order__contact div{display:flex;gap:12px}
+.order__contact span:first-child{width:88px;flex:0 0 auto;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.sheet{background:var(--paper);border:1px solid var(--ink);padding:clamp(20px,2.6vw,30px)}
+.sheet h3{font-family:var(--display);font-size:24px;font-weight:400}
+.sheet .sub{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.sheet__field{margin-top:22px}
+.sheet__field label,.sheet__field .lbl{display:block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{padding:8px 12px;border:1px solid var(--line);font-size:11.5px;letter-spacing:.02em;color:var(--ink-soft);transition:.22s;background:transparent}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line)}
+.qty button{width:40px;height:40px;font-size:16px;color:var(--ink-soft);transition:background .2s}
+.qty button:hover{background:var(--paper-2)}
+.qty output{width:48px;text-align:center;font-size:14px;border-inline:1px solid var(--line);height:40px;line-height:40px}
+.sheet__sum{margin-top:22px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--muted);line-height:1.9;min-height:56px}
+.sheet__sum b{color:var(--ink);font-weight:500}
+.sheet .btn{width:100%;margin-top:16px}
+.sheet .hint{font-size:10px;color:var(--muted);margin-top:10px;letter-spacing:.03em;text-align:center}
+
+/* footer */
+.foot{border-top:1px solid var(--ink);padding-block:40px 28px;background:var(--paper-2)}
+.foot__in{display:grid;grid-template-columns:1.5fr .7fr .8fr;gap:32px;align-items:start}
+.foot .brand b{font-size:18px}
+.foot p,.foot a{font-size:12.5px;color:var(--ink-soft);line-height:1.9}
+.foot a:hover{color:var(--bronze)}
+.foot h3{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:500}
+.foot__note{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;font-size:10px;letter-spacing:.06em;color:var(--muted)}
+.mobile-nav{position:fixed;inset:66px 0 auto;background:var(--paper);border-bottom:1px solid var(--line);padding:8px var(--pad) 20px;display:none;flex-direction:column;z-index:99}
+.mobile-nav.is-open{display:flex}
+.mobile-nav a{padding:14px 0;border-bottom:1px solid var(--line-soft);font-size:13px;letter-spacing:.06em}
+
+@media (max-width:1080px){
+  .hero h1{font-size:clamp(52px,10.5vw,108px)}
+  .index{grid-template-columns:1fr .8fr}
+}
+@media (max-width:900px){
+  .nav,.hd__cta{display:none}
+  .burger{display:inline-flex}
+  .hero{min-height:auto;padding-block:104px 48px}
+  .hero__top{grid-template-columns:1fr;gap:32px}
+  .hero__figure{max-width:420px}
+  .sec{min-height:auto}
+  .index{grid-template-columns:1fr;gap:24px}
+  .idx-panel{position:static;display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:start;border-top:1px solid var(--line);padding-top:18px}
+  .idx-panel__photo{aspect-ratio:1/1}
+  .idx-panel__info{flex-direction:column;align-items:flex-start;gap:4px;border-top:0;padding-top:0;margin-top:0}
+  .idx-panel__info .notes{text-align:left}
+  .idx-note{grid-column:1 / -1;margin-top:0}
+  .order{grid-template-columns:1fr}
+  .lr{grid-template-columns:32px 1fr auto;gap:10px}
+  .lr .notes{grid-column:2 / -1;margin-top:-4px}
+  .phil__cols{grid-template-columns:1fr;gap:18px}
+  .foot__in{grid-template-columns:1fr 1fr}
+}
+@media (max-width:520px){
+  .hero h1{font-size:clamp(42px,13vw,64px)}
+  .hero__copy .facts{grid-template-columns:1fr 1fr;gap:12px}
+  .sec-label{flex-direction:column;gap:6px}
+  .sec-label p{white-space:normal}
+  .idx-row{grid-template-columns:26px 1fr;gap:10px}
+  .idx-row .pr{grid-column:2;text-align:left;display:flex;gap:8px;align-items:baseline}
+  .idx-row .pr span{margin-top:0}
+  .idx-panel{grid-template-columns:1fr}
+  .lr{grid-template-columns:24px 1fr}
+  .lr .price{grid-column:2;text-align:left;margin-top:4px}
+  .foot__in{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important;scroll-behavior:auto}
+  [data-enter]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#indeks">Lompat ke indeks aroma</a>
+
+<header class="hd">
+  <div class="hd__in">
+    <a class="brand" href="#top" aria-label="Dupa Keraton, kembali ke atas">
+      <img src="../assets/logo.jpg" alt="">
+      <span style="display:block"><b>Dupa Keraton</b><span>Indonesia</span></span>
+    </a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#indeks">Indeks</a>
+      <a href="#filosofi">Filosofi</a>
+      <a href="#lanus">Dupa Lanus</a>
+      <a href="#pesan">Pemesanan</a>
+    </nav>
+    <a class="hd__cta" href="https://wa.me/6285155203672">Pesan
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Buka menu"><span aria-hidden="true"></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mnav" aria-label="Navigasi ponsel">
+  <a href="#indeks">Indeks aroma</a>
+  <a href="#filosofi">Filosofi</a>
+  <a href="#lanus">Dupa Lanus</a>
+  <a href="#pesan">Pemesanan</a>
+  <a href="https://wa.me/6285155203672">WhatsApp</a>
+</nav>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__top">
+        <div class="hero__copy">
+          <div class="hero__meta" data-enter>
+            <span>Dupa Keraton &mdash; Indonesia</span>
+            <span>Eceran &middot; Reseller &middot; Ekspor</span>
+          </div>
+          <h1 data-enter="2">Aroma Tradisi, <em>Sentuhan Kemewahan</em> Nusantara</h1>
+          <p class="lead" data-enter="3">Dupa premium yang diracik dari kekayaan budaya Nusantara. Delapan karakter aroma untuk ritual, meditasi, dan ketenangan yang tinggal lama di setiap ruang.</p>
+          <div class="hero__acts" data-enter="3">
+            <a class="btn btn--solid" href="https://wa.me/6285155203672">Pesan via WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--line" href="#indeks">Telusuri indeks</a>
+          </div>
+          <div class="facts" data-enter="4">
+            <div><b>08</b><span>Varian Keraton</span></div>
+            <div><b>Rp35.000</b><span>Mulai eceran</span></div>
+            <div><b>01</b><span>Lini harian</span></div>
+          </div>
+        </div>
+        <figure class="hero__figure" data-enter="4">
+          <div class="frame" aria-hidden="true"></div>
+          <img src="../assets/arumdalu.jpg" alt="Kemasan dupa Arumdalu berwarna abu-biru muda dengan motif kawung" width="1000" height="1000">
+          <figcaption class="sr-only">Arumdalu, varian lavender, sereh, dan jeruk.</figcaption>
+          <span class="tag">Arumdalu &mdash; Lavender &middot; Sereh &middot; Jeruk</span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="indeks">
+    <div class="wrap sec__in">
+      <div class="sec-label">
+        <h2>Indeks aroma</h2>
+        <p>Delapan varian &mdash; pilih untuk melihat</p>
+      </div>
+      <div class="index">
+        <div class="idx-list" role="tablist" aria-label="Indeks aroma Dupa Keraton">
+          <button class="idx-row" role="tab" data-img="../assets/arumdalu.jpg" data-name="Arumdalu" data-notes="Lavender · Sereh · Jeruk" data-alt="Kemasan Arumdalu abu-biru muda" aria-current="true">
+            <em>01</em><span class="nm">Arumdalu<span class="nt">Lavender &middot; Sereh &middot; Jeruk</span></span><span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+          </button>
+          <button class="idx-row" role="tab" data-img="../assets/cendana.jpg" data-name="Cendana" data-notes="Cendana · Jeruk · Oud" data-alt="Kemasan Cendana biru toska">
+            <em>02</em><span class="nm">Cendana<span class="nt">Cendana &middot; Jeruk &middot; Oud</span></span><span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+          </button>
+          <button class="idx-row" role="tab" data-img="../assets/melati-jawa.jpg" data-name="Melati Jawa" data-notes="Melati · Teh · Kayu" data-alt="Kemasan Melati Jawa putih perak">
+            <em>03</em><span class="nm">Melati Jawa<span class="nt">Melati &middot; Teh &middot; Kayu</span></span><span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+          </button>
+          <button class="idx-row" role="tab" data-img="../assets/ndalem-ratu.jpg" data-name="Ndalem Ratu" data-notes="Vanila · Teh · Powdery" data-alt="Kemasan Ndalem Ratu hitam">
+            <em>04</em><span class="nm">Ndalem Ratu<span class="nt">Vanila &middot; Teh &middot; Powdery</span></span><span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+          </button>
+          <button class="idx-row" role="tab" data-img="../assets/abdi-dalem.jpg" data-name="Abdi Dalem" data-notes="Oud · Kenanga · Cedar" data-alt="Kemasan Abdi Dalem emas">
+            <em>05</em><span class="nm">Abdi Dalem<span class="nt">Oud &middot; Kenanga &middot; Cedar</span></span><span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+          </button>
+          <button class="idx-row" role="tab" data-img="../assets/gaharu.jpg" data-name="Gaharu" data-notes="Gaharu · Oud · Hangat" data-alt="Kemasan Gaharu hijau tua">
+            <em>06</em><span class="nm">Gaharu<span class="nt">Gaharu &middot; Oud &middot; Hangat</span></span><span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+          </button>
+          <button class="idx-row" role="tab" data-img="../assets/saranjana.jpg" data-name="Saranjana" data-notes="Sakura · Teh · Kayu lembut" data-alt="Kemasan Saranjana krem keemasan">
+            <em>07</em><span class="nm">Saranjana<span class="nt">Sakura &middot; Teh &middot; Kayu lembut</span></span><span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+          </button>
+          <button class="idx-row" role="tab" data-img="../assets/saranjana.jpg" data-name="Maharaja" data-notes="Karakter kuat · Hangat" data-alt="Foto kemasan Maharaja menyusul">
+            <em>08</em><span class="nm">Maharaja<span class="nt">Karakter kuat &middot; Hangat</span></span><span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+          </button>
+        </div>
+        <div class="idx-panel">
+          <div class="idx-panel__photo">
+            <span class="idx-panel__no" id="idxNo">01 / 08</span>
+            <img id="idxImg" src="../assets/arumdalu.jpg" alt="Kemasan Arumdalu abu-biru muda" width="1000" height="1000">
+          </div>
+          <div class="idx-panel__info">
+            <h3 id="idxName">Arumdalu</h3>
+            <p class="notes" id="idxNotes">Lavender &middot; Sereh &middot; Jeruk</p>
+          </div>
+          <p class="idx-note">Arahkan atau klik nama varian untuk mengganti gambar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec phil" id="filosofi">
+    <div class="wrap sec__in" style="max-width:1040px">
+      <div class="sec-label" style="border-top-color:var(--line)">
+        <h2>Filosofi</h2>
+        <p>Warisan &mdash; bukan sekadar aroma</p>
+      </div>
+      <blockquote>&ldquo;Setiap aroma memiliki <em>cerita dan karakter</em> tersendiri.&rdquo;</blockquote>
+      <p class="lead">Dupa Keraton menghadirkan pengalaman wewangian yang terinspirasi dari keindahan tradisi dan kekayaan budaya Nusantara — suasana nyaman, menenangkan, dan berkesan dalam setiap ruang.</p>
+      <div class="phil__cols">
+        <div><h3>Tradisi</h3><p>Racikan yang mengacu pada budaya wewangian Jawa, diracik ulang agar relevan untuk rumah dan tempat usaha masa kini.</p></div>
+        <div><h3>Karakter</h3><p>Dari Arumdalu yang lembut sampai Gaharu yang dalam, tiap varian dibuat untuk satu suasana tertentu — bukan untuk semua orang sekaligus.</p></div>
+        <div><h3>Elegansi</h3><p>Kemasan dengan motif kawung dan aksen emas, dirancang untuk dipajang, diberikan, dan dikenang.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="lanus">
+    <div class="wrap sec__in">
+      <div class="sec-label">
+        <h2>Dupa Lanus</h2>
+        <p>Lini harian &mdash; harga lebih ringan</p>
+      </div>
+      <div class="lanus__table">
+        <div class="lr"><em>01</em><h3>Cendana</h3><span class="notes">Cendana &middot; Jeruk</span><div class="price">Rp10.000<span>Reseller Rp7.800</span></div></div>
+        <div class="lr"><em>02</em><h3>Maharaja</h3><span class="notes">Karakter kuat</span><div class="price">Rp10.000<span>Reseller Rp7.800</span></div></div>
+        <div class="lr"><em>03</em><h3>Melati</h3><span class="notes">Melati &middot; Teh</span><div class="price">Rp10.000<span>Reseller Rp7.800</span></div></div>
+        <div class="lr"><em>04</em><h3>Gaharu</h3><span class="notes">Gaharu &middot; Kayu</span><div class="price">Rp10.000<span>Reseller Rp7.800</span></div></div>
+      </div>
+      <div class="lanus__foot">
+        <p>Koleksi dupa ekonomis untuk penggunaan sehari-hari maupun penjualan kembali. Terima pesanan eceran dan reseller.</p>
+        <a class="btn btn--line" href="https://wa.me/6285155203672?text=Halo%20Dupa%20Keraton%2C%20saya%20ingin%20memesan%20Dupa%20Lanus.">Tanya stok Lanus</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="pesan">
+    <div class="wrap sec__in">
+      <div class="order">
+        <div>
+          <p class="eyebrow">Pemesanan</p>
+          <h2>Satu percakapan, <em>selesai</em></h2>
+          <p>Susun pesanan Anda di lembar samping, lalu kirim lewat WhatsApp. Kami balas dengan ketersediaan stok, ongkos kirim, dan total akhir sebelum pembayaran.</p>
+          <p style="font-size:14px;margin-top:14px">Melayani pembeli lokal maupun internasional, termasuk reseller, distributor, dan mitra bisnis. Untuk pesanan ekspor, sebutkan negara tujuan.</p>
+          <div class="order__contact">
+            <div><span>WhatsApp</span><span><a href="https://wa.me/6285155203672">+62 851-5520-3672</a></span></div>
+            <div><span>Melayani</span><span>Eceran, reseller, distributor, ekspor</span></div>
+            <div><span>Pengiriman</span><span>Seluruh Indonesia &amp; mancanegara</span></div>
+            <div><span>Alamat</span><span>Menyusul dari pemilik</span></div>
+          </div>
+        </div>
+
+        <div class="sheet">
+          <h3>Lembar pesanan</h3>
+          <p class="sub">Mockup &mdash; tidak mengirim data</p>
+          <div class="sheet__field">
+            <span class="lbl" id="lblVariant">Pilih varian</span>
+            <div class="chips" role="group" aria-labelledby="lblVariant" id="chips">
+              <button class="chip" type="button" data-variant="Arumdalu" aria-pressed="false">Arumdalu</button>
+              <button class="chip" type="button" data-variant="Cendana" aria-pressed="false">Cendana</button>
+              <button class="chip" type="button" data-variant="Melati Jawa" aria-pressed="false">Melati Jawa</button>
+              <button class="chip" type="button" data-variant="Ndalem Ratu" aria-pressed="false">Ndalem Ratu</button>
+              <button class="chip" type="button" data-variant="Abdi Dalem" aria-pressed="false">Abdi Dalem</button>
+              <button class="chip" type="button" data-variant="Gaharu" aria-pressed="false">Gaharu</button>
+              <button class="chip" type="button" data-variant="Saranjana" aria-pressed="false">Saranjana</button>
+              <button class="chip" type="button" data-variant="Maharaja" aria-pressed="false">Maharaja</button>
+            </div>
+          </div>
+          <div class="sheet__field">
+            <span class="lbl">Jumlah</span>
+            <div class="qty">
+              <button type="button" id="minus" aria-label="Kurangi jumlah">&minus;</button>
+              <output id="qtyOut" aria-live="polite">1</output>
+              <button type="button" id="plus" aria-label="Tambah jumlah">+</button>
+            </div>
+          </div>
+          <div class="sheet__sum" id="sum" aria-live="polite">Belum ada varian dipilih.</div>
+          <a class="btn btn--solid" id="waBtn" href="https://wa.me/6285155203672">Kirim ke WhatsApp</a>
+          <p class="hint">Harga mengikuti daftar eceran; ongkir dihitung saat konfirmasi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <div class="brand" style="margin-bottom:12px">
+          <img src="../assets/logo.jpg" alt="">
+          <span style="display:block"><b>Dupa Keraton</b><span>Indonesia</span></span>
+        </div>
+        <p>Aroma Tradisi, Sentuhan Kemewahan Nusantara.<br>Dupa otentik Indonesia untuk ritual, relaksasi, dan ruang yang ingin terasa lebih tenang.</p>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <p><a href="#indeks">Indeks aroma</a><br><a href="#filosofi">Filosofi</a><br><a href="#lanus">Dupa Lanus</a><br><a href="#pesan">Pemesanan</a></p>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <p><a href="https://wa.me/6285155203672">WhatsApp</a><br>Media sosial menyusul<br>Alamat menyusul</p>
+      </div>
+    </div>
+    <div class="foot__note">
+      <span>&copy; 2026 Dupa Keraton</span>
+      <span>Mockup desain &mdash; data menunggu konfirmasi pemilik</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var burger = document.getElementById('burger'), mnav = document.getElementById('mnav');
+  burger.addEventListener('click', function(){
+    var open = mnav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  var img = document.getElementById('idxImg');
+  var nameEl = document.getElementById('idxName');
+  var notesEl = document.getElementById('idxNotes');
+  var noEl = document.getElementById('idxNo');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.idx-row'));
+  var active = 0, timer;
+
+  function select(row, idx){
+    if(idx === active && row.getAttribute('aria-current') === 'true') return;
+    active = idx;
+    rows.forEach(function(r){ r.removeAttribute('aria-current'); });
+    row.setAttribute('aria-current','true');
+    img.classList.add('is-fading');
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+      img.src = row.dataset.img;
+      img.alt = row.dataset.alt;
+      nameEl.textContent = row.dataset.name;
+      notesEl.textContent = row.dataset.notes.replace(/·/g,'·');
+      noEl.textContent = String(idx+1).padStart(2,'0') + ' / 08';
+      img.classList.remove('is-fading');
+    }, 220);
+  }
+  rows.forEach(function(row, idx){
+    row.addEventListener('mouseenter', function(){ select(row, idx); });
+    row.addEventListener('focus', function(){ select(row, idx); });
+    row.addEventListener('click', function(){ select(row, idx); });
+  });
+
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var qty = 1, selected = null;
+  var qtyOut = document.getElementById('qtyOut');
+  var sum = document.getElementById('sum');
+  var waBtn = document.getElementById('waBtn');
+
+  function render(){
+    qtyOut.textContent = qty;
+    if(!selected){
+      sum.textContent = 'Belum ada varian dipilih.';
+      waBtn.href = 'https://wa.me/6285155203672';
+      return;
+    }
+    var total = 35000 * qty;
+    sum.innerHTML = '<b>' + selected + '</b> &times; ' + qty + ' bungkus<br>Perkiraan total <b>Rp' + total.toLocaleString('id-ID') + '</b> (harga eceran)';
+    var msg = 'Halo Dupa Keraton, saya ingin memesan ' + selected + ' sebanyak ' + qty + ' bungkus. Mohon info stok dan ongkos kirim.';
+    waBtn.href = 'https://wa.me/6285155203672?text=' + encodeURIComponent(msg);
+  }
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      var was = chip.getAttribute('aria-pressed') === 'true';
+      chips.forEach(function(c){ c.setAttribute('aria-pressed','false'); });
+      if(was){ selected = null; } else { chip.setAttribute('aria-pressed','true'); selected = chip.dataset.variant; }
+      render();
+    });
+  });
+  document.getElementById('plus').addEventListener('click', function(){ qty = Math.min(99, qty+1); render(); });
+  document.getElementById('minus').addEventListener('click', function(){ qty = Math.max(1, qty-1); render(); });
+  render();
+})();
+</script>
+</body>
+</html>

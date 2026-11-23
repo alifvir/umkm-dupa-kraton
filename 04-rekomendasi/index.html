@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="id" data-radius="sharp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dupa Keraton — Aroma Tradisi, Sentuhan Kemewahan Nusantara</title>
+<meta name="description" content="Dupa premium Indonesia dengan delapan karakter aroma warisan Nusantara. Eceran, reseller, distributor, dan pengiriman internasional.">
+<meta name="page-type" content="product">
+<meta name="site-kind" content="other">
+<meta name="theme-color" content="#0F0C09">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0F0C09;
+  --ink-2:#151009;
+  --surface:#1B1510;
+  --surface-2:#221A13;
+  --line:rgba(198,161,91,.22);
+  --line-soft:rgba(242,233,218,.10);
+  --gold:#C6A15B;
+  --gold-lt:#E7CB9B;
+  --cream:#F2E9DA;
+  --muted:#B7A78F;
+  --display:"Fraunces",Georgia,serif;
+  --sans:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --wrap:1240px;
+  --pad:clamp(20px,5vw,64px);
+}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold-lt);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+.eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:200;background:var(--gold);color:#22190F;padding:10px 16px;border-radius:2px;font-size:13px;font-weight:500;transition:top .2s}
+.skip:focus{top:12px}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto;z-index:100;height:74px;display:flex;align-items:center;border-bottom:1px solid transparent;transition:background .35s,border-color .35s,height .35s;background:linear-gradient(180deg,rgba(15,12,9,.72),rgba(15,12,9,0))}
+.hd__in{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand__seal{width:42px;height:42px;border-radius:50%;overflow:hidden;border:1px solid var(--line);flex:0 0 auto;background:#F7E9D2}
+.brand__seal img{width:100%;height:100%;object-fit:cover;transform:scale(1.18)}
+.brand__name{font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--cream);white-space:nowrap}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:13px;letter-spacing:.06em;color:var(--muted);position:relative;padding-block:6px;transition:color .25s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav a:hover{color:var(--cream)}
+.nav a:hover::after{transform:scaleX(1)}
+.lang{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;color:var(--muted)}
+.lang button{padding:4px 2px;color:var(--muted);letter-spacing:.14em;font-size:11px;transition:color .2s}
+.lang button[aria-pressed="true"]{color:var(--gold-lt)}
+.lang i{width:1px;height:12px;background:var(--line)}
+.hd.is-stuck{background:rgba(15,12,9,.94);backdrop-filter:blur(14px);border-bottom-color:var(--line-soft);height:66px}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:2px}
+.burger span{display:block;width:18px;height:1px;background:var(--cream);position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:1px;background:var(--cream)}
+.burger span::before{top:-5px}.burger span::after{top:5px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-block:120px 60px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(900px 620px at 78% 28%,rgba(198,161,91,.14),transparent 62%),
+  radial-gradient(700px 500px at 8% 88%,rgba(126,60,38,.16),transparent 68%);
+  pointer-events:none}
+.hero__grid{position:relative;display:grid;grid-template-columns:1.02fr .88fr;gap:clamp(32px,6vw,84px);align-items:center;width:100%}
+.hero h1{font-family:var(--display);font-weight:300;font-size:clamp(42px,5.1vw,72px);line-height:1.04;letter-spacing:-.02em;margin:22px 0 0;max-width:15ch}
+.hero h1 em{font-style:italic;color:var(--gold-lt)}
+.hero__lead{margin-top:24px;max-width:46ch;color:var(--muted);font-size:16px;line-height:1.75}
+.hero__acts{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:2px;font-size:13px;letter-spacing:.08em;font-weight:500;transition:transform .18s,background .25s,color .25s,border-color .25s;will-change:transform}
+.btn:active{transform:translateY(1px)}
+.btn--gold{background:var(--gold);color:#1A1206}
+.btn--gold:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.btn--ghost{border:1px solid var(--line);color:var(--cream)}
+.btn--ghost:hover{border-color:var(--gold);color:var(--gold-lt);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px;flex:0 0 auto}
+.hero__facts{display:flex;flex-wrap:wrap;gap:0;margin-top:46px;border-top:1px solid var(--line-soft);padding-top:22px}
+.hero__facts div{padding-right:26px;margin-right:26px;border-right:1px solid var(--line-soft)}
+.hero__facts div:last-child{border:0;margin:0;padding:0}
+.hero__facts b{display:block;font-family:var(--display);font-size:19px;font-weight:400;color:var(--cream)}
+.hero__facts span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.arch{position:relative;width:100%;max-width:440px;margin-inline:auto;aspect-ratio:4/5}
+.arch__frame{position:absolute;inset:0;border:1px solid var(--line);border-radius:340px 340px 3px 3px;transform:translate(14px,14px)}
+.arch__photo{position:absolute;inset:0;overflow:hidden;border-radius:340px 340px 3px 3px;background:#EFE2CE}
+.arch__photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 1.2s ease}
+.arch:hover .arch__photo img{transform:scale(1.05)}
+.arch__badge{position:absolute;left:50%;bottom:-1px;transform:translate(-50%,50%);background:var(--ink);border:1px solid var(--line);padding:10px 18px;white-space:nowrap;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lt)}
+[data-enter]{opacity:0;transform:translateY(18px);animation:enter .9s cubic-bezier(.2,.7,.2,1) forwards}
+[data-enter="2"]{animation-delay:.12s}
+[data-enter="3"]{animation-delay:.24s}
+[data-enter="4"]{animation-delay:.36s}
+@keyframes enter{to{opacity:1;transform:none}}
+
+/* shell */
+.sec{position:relative;padding-block:clamp(72px,9vh,120px);min-height:100svh;display:flex;align-items:center}
+.sec__in{width:100%}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:26px;border-bottom:1px solid var(--line-soft);margin-bottom:clamp(26px,3.6vw,44px)}
+.sec-head h2{font-family:var(--display);font-weight:300;font-size:clamp(30px,3.4vw,46px);letter-spacing:-.01em;line-height:1.1}
+.sec-head p{color:var(--muted);font-size:14px;max-width:46ch;margin-top:10px}
+.tabs{display:inline-flex;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.tabs button{padding:11px 20px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);transition:background .25s,color .25s}
+.tabs button+button{border-left:1px solid var(--line)}
+.tabs button[aria-selected="true"]{background:var(--gold);color:#1A1206}
+.tabs button:not([aria-selected="true"]):hover{color:var(--cream);background:rgba(198,161,91,.08)}
+
+/* index */
+.index{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,5vw,72px);align-items:start}
+.idx-list{border-top:1px solid var(--line)}
+.idx-row{width:100%;display:grid;grid-template-columns:34px 1fr auto;gap:16px;align-items:center;padding:clamp(12px,1.7vh,17px) 8px;border-bottom:1px solid var(--line-soft);text-align:left;transition:padding .3s,background .3s;position:relative;border-radius:2px}
+.idx-row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--gold);transform:scaleY(0);transform-origin:top;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.idx-row em{font-family:var(--display);font-style:normal;font-size:13px;color:var(--muted)}
+.idx-row .nm{font-family:var(--display);font-size:clamp(21px,2.2vw,29px);font-weight:400;letter-spacing:-.01em;line-height:1.15;transition:color .25s;display:block}
+.idx-row .nt{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:5px;font-weight:400;line-height:1.6}
+.idx-row .pr{font-size:12.5px;color:var(--cream);white-space:nowrap;text-align:right}
+.idx-row .pr span{display:block;font-size:10px;color:var(--muted);margin-top:3px}
+.idx-row:hover{padding-left:16px;background:rgba(198,161,91,.06)}
+.idx-row:hover .nm{color:var(--gold-lt)}
+.idx-row[aria-current="true"]{padding-left:16px;background:rgba(198,161,91,.08)}
+.idx-row[aria-current="true"]::before{transform:scaleY(1)}
+.idx-row[aria-current="true"] .nm{color:var(--gold-lt)}
+.idx-panel{position:sticky;top:96px}
+.idx-panel__photo{position:relative;border:1px solid var(--line);border-radius:300px 300px 3px 3px;background:#EFE2CE;aspect-ratio:4/5;overflow:hidden}
+.idx-panel__photo img{width:100%;height:100%;object-fit:cover;transition:opacity .32s ease}
+.idx-panel__photo img.is-fading{opacity:0}
+.idx-panel__no{position:absolute;top:14px;left:14px;background:rgba(15,12,9,.72);border:1px solid var(--line);padding:5px 9px;font-size:9.5px;letter-spacing:.2em;color:var(--gold-lt)}
+.idx-panel__empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--surface-2);color:var(--muted);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.idx-panel__empty[hidden]{display:none}
+.idx-panel__info{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding-top:15px;border-top:1px solid var(--line-soft);margin-top:15px}
+.idx-panel__info h3{font-family:var(--display);font-size:26px;font-weight:400;letter-spacing:-.01em}
+.idx-panel__info .notes{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-align:right;max-width:22ch}
+.idx-panel__acts{display:flex;gap:10px;margin-top:16px}
+.idx-panel__acts .btn{flex:1;height:46px;font-size:12px}
+.idx-hint{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+
+/* lanus price list */
+.lanus{display:none}
+.lanus.is-on{display:block}
+.lanus__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(32px,6vw,90px)}
+.lanus__row{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:16px;padding-block:22px;border-bottom:1px solid var(--line-soft);width:100%;text-align:left;transition:padding .25s,background .25s}
+.lanus__row:hover{padding-left:14px;background:rgba(198,161,91,.05)}
+.lanus__row em{font-family:var(--display);font-style:normal;font-size:12px;color:var(--gold);letter-spacing:.1em}
+.lanus__row h3{font-family:var(--display);font-weight:400;font-size:24px}
+.lanus__row p{grid-column:2;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:-10px;text-align:left}
+.lanus__row .price{grid-row:1;grid-column:3;text-align:right;font-size:13px;color:var(--cream);white-space:nowrap}
+.lanus__row .price span{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+.lanus__note{margin-top:26px;font-size:13px;color:var(--muted);max-width:62ch}
+
+/* heritage */
+.heritage{background:linear-gradient(180deg,var(--ink),#120E0A 40%,var(--ink))}
+.heritage__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.heritage__grid h2{font-family:var(--display);font-weight:300;font-size:clamp(30px,3.6vw,50px);line-height:1.08;letter-spacing:-.015em;margin-top:18px;max-width:14ch}
+.heritage__grid h2 em{font-style:italic;color:var(--gold-lt)}
+.heritage p{color:var(--muted);font-size:15px;line-height:1.85;margin-top:20px;max-width:52ch}
+.quote{position:relative;margin-top:44px;padding-left:26px;border-left:1px solid var(--gold)}
+.quote p{font-family:var(--display);font-style:italic;font-size:clamp(18px,2vw,23px);line-height:1.55;color:var(--cream);margin:0}
+.quote span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.heritage__media{position:relative}
+.heritage__media img{width:100%;aspect-ratio:5/4;object-fit:cover;border:1px solid var(--line);border-radius:2px}
+.heritage__media .seal{position:absolute;right:-18px;bottom:-18px;width:112px;height:112px;border-radius:50%;overflow:hidden;border:1px solid var(--line);background:#F7E9D2;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.heritage__media .seal img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);border:0;aspect-ratio:auto}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.values div{padding-top:16px;border-top:1px solid var(--line-soft)}
+.values h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lt);font-weight:500}
+.values p{font-size:13px;margin-top:8px;line-height:1.65}
+
+/* b2b */
+.b2b{background:var(--surface)}
+.b2b__grid{display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--line);border-radius:2px;overflow:hidden}
+.b2b__cell{padding:clamp(24px,3vw,40px);border-right:1px solid var(--line);background:rgba(15,12,9,.35)}
+.b2b__cell:last-child{border-right:0}
+.b2b__cell .num{font-family:var(--display);font-size:13px;color:var(--gold);letter-spacing:.14em}
+.b2b__cell h3{font-family:var(--display);font-weight:400;font-size:26px;margin-top:14px}
+.b2b__cell p{font-size:14px;color:var(--muted);line-height:1.7;margin-top:10px}
+.b2b__cell .price{font-size:13px;color:var(--cream);margin-top:18px;display:block}
+.b2b__cell .price b{font-weight:500;color:var(--gold-lt);font-size:15px}
+.b2b__foot{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;margin-top:34px}
+.b2b__foot p{font-size:13px;color:var(--muted);max-width:62ch}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,40px);counter-reset:s}
+.step{position:relative;padding-top:26px;border-top:1px solid var(--line)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);font-size:13px;color:var(--gold);letter-spacing:.14em}
+.step h3{font-family:var(--display);font-weight:400;font-size:23px;margin-top:14px}
+.step p{font-size:14px;color:var(--muted);line-height:1.7;margin-top:10px}
+
+/* close */
+.close{position:relative;text-align:center;padding-block:clamp(90px,12vh,150px);background:radial-gradient(700px 400px at 50% 0,rgba(198,161,91,.14),transparent 60%),var(--ink);border-top:1px solid var(--line-soft);display:block}
+.close h2{font-family:var(--display);font-weight:300;font-size:clamp(32px,4.4vw,58px);line-height:1.08;letter-spacing:-.02em;max-width:18ch;margin:18px auto 0}
+.close h2 em{font-style:italic;color:var(--gold-lt)}
+.close p{color:var(--muted);font-size:15px;margin:20px auto 0;max-width:48ch}
+.close .hero__acts{justify-content:center;margin-top:34px}
+
+/* footer */
+.foot{border-top:1px solid var(--line-soft);padding-block:44px 34px;background:#0C0A07}
+.foot__grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:32px}
+.foot h3{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:14px}
+.foot p,.foot a{font-size:13px;color:var(--muted);line-height:1.8}
+.foot a:hover{color:var(--cream)}
+.foot__brand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.foot__brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:#F7E9D2;border:1px solid var(--line)}
+.foot__brand b{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:500}
+.foot__note{margin-top:30px;padding-top:18px;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:11px;color:#7C6E5B;letter-spacing:.04em}
+
+/* dialog */
+dialog{border:0;padding:0;margin:auto;background:transparent;max-width:min(560px,calc(100vw - 32px));width:100%;color:var(--cream)}
+dialog::backdrop{background:rgba(8,6,4,.66);backdrop-filter:blur(4px)}
+.sheet{position:relative;background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:3px;padding:clamp(22px,3.2vw,34px)}
+.sheet h3{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1}
+.sheet .sub{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:6px}
+.sheet__close{position:absolute;top:14px;right:14px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:2px;font-size:17px;color:var(--cream);transition:background .2s}
+.sheet__close:hover{background:rgba(198,161,91,.12)}
+.sheet__row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding-block:14px;border-bottom:1px solid var(--line-soft);font-size:13.5px}
+.sheet__row span:first-child{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.sheet__row strong{font-weight:500}
+.sheet .qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:2px;margin-top:0}
+.sheet .qty button{width:40px;height:40px;font-size:16px;color:var(--cream)}
+.sheet .qty button:hover{background:rgba(198,161,91,.12)}
+.sheet .qty output{width:48px;text-align:center;font-size:14px;height:40px;line-height:40px;border-inline:1px solid var(--line-soft)}
+.sheet__sum{padding-block:14px;font-size:12.5px;color:var(--muted);line-height:1.7}
+.sheet__sum b{color:var(--cream);font-weight:500}
+.sheet .btn{width:100%;margin-top:8px}
+.sheet .note{font-size:10.5px;color:var(--muted);margin-top:10px;text-align:center;line-height:1.6}
+
+.mobile-nav{display:none}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--cream);color:#231A10;padding:12px 20px;border-radius:2px;font-size:13px;opacity:0;pointer-events:none;transition:.3s;z-index:300}
+.toast.is-on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:1080px){
+  .hero__grid{grid-template-columns:1fr .8fr;gap:32px}
+  .index{grid-template-columns:1fr .85fr;gap:36px}
+  .b2b__grid{grid-template-columns:1fr}
+  .b2b__cell{border-right:0;border-bottom:1px solid var(--line)}
+  .b2b__cell:last-child{border-bottom:0}
+}
+@media (max-width:860px){
+  .nav{display:none}
+  .burger{display:inline-flex}
+  .hero{padding-block:112px 56px;min-height:auto}
+  .hero__grid{grid-template-columns:1fr;gap:40px}
+  .arch{max-width:340px;order:-1}
+  .sec{min-height:auto}
+  .index{grid-template-columns:1fr;gap:22px}
+  .idx-panel{position:static;grid-row:1;order:-1}
+  .idx-panel__photo{aspect-ratio:16/11;border-radius:160px 160px 3px 3px}
+  .idx-panel__info{padding-top:12px;margin-top:12px}
+  .idx-panel__acts{margin-top:12px}
+  .idx-hint{display:none}
+  .lanus__grid{grid-template-columns:1fr}
+  .heritage__grid{grid-template-columns:1fr;gap:32px}
+  .values{grid-template-columns:1fr;gap:14px}
+  .steps{grid-template-columns:1fr;gap:22px}
+  .foot__grid{grid-template-columns:1fr 1fr}
+  .mobile-nav{position:fixed;inset:74px 0 auto;background:rgba(15,12,9,.98);border-bottom:1px solid var(--line);padding:12px var(--pad) 24px;display:none;flex-direction:column;gap:2px;z-index:99}
+  .mobile-nav.is-open{display:flex}
+  .mobile-nav a{padding:14px 0;border-bottom:1px solid var(--line-soft);font-size:14px;color:var(--cream)}
+}
+@media (max-width:520px){
+  .idx-row{grid-template-columns:26px 1fr;gap:8px 12px}
+  .idx-row .pr{grid-column:2;text-align:left;display:flex;gap:10px;align-items:baseline}
+  .idx-row .pr span{margin-top:0}
+  .lanus__row{grid-template-columns:auto 1fr;gap:6px 12px}
+  .lanus__row .price{grid-row:2;grid-column:2;text-align:left;margin-top:6px}
+  .lanus__row p{grid-column:2;margin-top:0}
+  .foot__grid{grid-template-columns:1fr}
+  .hero__facts div{padding-right:18px;margin-right:18px}
+  .hero__acts .btn{flex:1 1 100%}
+  .idx-panel__acts{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important;scroll-behavior:auto}
+  [data-enter]{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#koleksi">Lompat ke koleksi</a>
+
+<header class="hd" id="hd">
+  <div class="hd__in">
+    <a class="brand" href="#top" aria-label="Dupa Keraton, kembali ke atas">
+      <span class="brand__seal"><img src="../assets/logo.jpg" alt="Logo Dupa Keraton"></span>
+      <span class="brand__name">Dupa Keraton</span>
+    </a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#koleksi" data-en="Collection">Koleksi</a>
+      <a href="#warisan" data-en="Heritage">Warisan</a>
+      <a href="#reseller" data-en="Wholesale">Reseller</a>
+      <a href="#pesan" data-en="Order">Cara Pesan</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="lang" role="group" aria-label="Bahasa">
+        <button type="button" id="lang-id" aria-pressed="true">ID</button>
+        <i aria-hidden="true"></i>
+        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Buka menu"><span aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mnav" aria-label="Navigasi ponsel">
+  <a href="#koleksi">Koleksi</a>
+  <a href="#warisan">Warisan</a>
+  <a href="#reseller">Reseller</a>
+  <a href="#pesan">Cara Pesan</a>
+  <a href="https://wa.me/6285155203672" style="color:var(--gold-lt)">WhatsApp</a>
+</nav>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow" data-enter data-en="Indonesian heritage incense">Dupa warisan Nusantara</p>
+        <h1 data-enter="2" data-en-html="Aroma of Tradition, <em>The Luxury of the Archipelago</em>">Aroma Tradisi, <em>Sentuhan Kemewahan Nusantara</em></h1>
+        <p class="hero__lead" data-enter="3" data-en="Premium incense with the character of Javanese heritage. Eight distinctive scents for prayer, meditation, and the quiet moments in between.">Dupa premium dengan karakter warisan Jawa. Delapan varian aroma untuk ritual, meditasi, dan ketenangan yang tinggal lama di setiap ruang.</p>
+        <div class="hero__acts" data-enter="4">
+          <a class="btn btn--gold" href="https://wa.me/6285155203672" data-en="Order via WhatsApp">Pesan via WhatsApp
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#koleksi" data-en="View collection">Lihat koleksi</a>
+        </div>
+        <div class="hero__facts" data-enter="4">
+          <div><b>8</b><span data-en="scents">varian aroma</span></div>
+          <div><b>Rp35.000</b><span data-en="retail start">mulai eceran</span></div>
+          <div><b data-en="Worldwide">Seluruh dunia</b><span data-en="shipping">pengiriman</span></div>
+        </div>
+      </div>
+      <div class="arch" data-enter="3">
+        <div class="arch__frame" aria-hidden="true"></div>
+        <div class="arch__photo">
+          <img src="../assets/ndalem-ratu.jpg" alt="Kemasan dupa Ndalem Ratu, kotak hitam berhias motif kawung emas" width="1000" height="1000">
+        </div>
+        <span class="arch__badge" data-en="Ndalem Ratu &mdash; Vanilla, Tea, Powdery">Ndalem Ratu &mdash; Vanila, Teh, Powdery</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="koleksi">
+    <div class="wrap sec__in">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow" data-en="The collection">Koleksi</p>
+          <h2 style="margin-top:10px" data-en="The scent index">Indeks aroma</h2>
+          <p data-en="Eight characters, one for every mood — from the light calm of Arumdalu to the deep warmth of Gaharu. Hover or tap a name to see its packaging.">Delapan karakter, satu untuk setiap suasana — dari ringannya Arumdalu sampai dalamnya Gaharu. Arahkan atau ketuk nama varian untuk melihat kemasannya.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Pilih koleksi">
+          <button role="tab" id="tab-keraton" aria-selected="true" aria-controls="panel-keraton">Dupa Keraton</button>
+          <button role="tab" id="tab-lanus" aria-selected="false" aria-controls="panel-lanus">Dupa Lanus</button>
+        </div>
+      </div>
+
+      <div id="panel-keraton" role="tabpanel" aria-labelledby="tab-keraton">
+        <div class="index">
+          <div class="idx-list" id="idxList">
+            <button class="idx-row" type="button" aria-current="true" data-img="../assets/arumdalu.jpg" data-name="Arumdalu" data-notes="Lavender · Sereh · Jeruk" data-alt="Kemasan Arumdalu abu-biru muda">
+              <em>01</em>
+              <span><span class="nm">Arumdalu</span><span class="nt">Lavender &middot; Sereh &middot; Jeruk</span></span>
+              <span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+            </button>
+            <button class="idx-row" type="button" data-img="../assets/cendana.jpg" data-name="Cendana" data-notes="Cendana · Jeruk · Oud" data-alt="Kemasan Cendana biru toska">
+              <em>02</em>
+              <span><span class="nm">Cendana</span><span class="nt">Cendana &middot; Jeruk &middot; Oud</span></span>
+              <span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+            </button>
+            <button class="idx-row" type="button" data-img="../assets/melati-jawa.jpg" data-name="Melati Jawa" data-notes="Melati · Teh · Kayu" data-alt="Kemasan Melati Jawa putih perak">
+              <em>03</em>
+              <span><span class="nm">Melati Jawa</span><span class="nt">Melati &middot; Teh &middot; Kayu</span></span>
+              <span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+            </button>
+            <button class="idx-row" type="button" data-img="../assets/ndalem-ratu.jpg" data-name="Ndalem Ratu" data-notes="Vanila · Teh · Powdery" data-alt="Kemasan Ndalem Ratu hitam">
+              <em>04</em>
+              <span><span class="nm">Ndalem Ratu</span><span class="nt">Vanila &middot; Teh &middot; Powdery</span></span>
+              <span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+            </button>
+            <button class="idx-row" type="button" data-img="../assets/abdi-dalem.jpg" data-name="Abdi Dalem" data-notes="Oud · Kenanga · Cedar" data-alt="Kemasan Abdi Dalem emas">
+              <em>05</em>
+              <span><span class="nm">Abdi Dalem</span><span class="nt">Oud &middot; Kenanga &middot; Cedar</span></span>
+              <span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+            </button>
+            <button class="idx-row" type="button" data-img="../assets/gaharu.jpg" data-name="Gaharu" data-notes="Gaharu · Oud · Hangat" data-alt="Kemasan Gaharu hijau tua">
+              <em>06</em>
+              <span><span class="nm">Gaharu</span><span class="nt">Gaharu &middot; Oud &middot; Hangat</span></span>
+              <span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+            </button>
+            <button class="idx-row" type="button" data-img="../assets/saranjana.jpg" data-name="Saranjana" data-notes="Sakura · Teh · Kayu lembut" data-alt="Kemasan Saranjana krem keemasan">
+              <em>07</em>
+              <span><span class="nm">Saranjana</span><span class="nt">Sakura &middot; Teh &middot; Kayu lembut</span></span>
+              <span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+            </button>
+            <button class="idx-row" type="button" data-img="" data-name="Maharaja" data-notes="Karakter kuat · Hangat" data-alt="Foto kemasan Maharaja menyusul">
+              <em>08</em>
+              <span><span class="nm">Maharaja</span><span class="nt">Karakter kuat &middot; Hangat</span></span>
+              <span class="pr">Rp35.000<span>Reseller Rp28.000</span></span>
+            </button>
+          </div>
+
+          <div class="idx-panel">
+            <div class="idx-panel__photo">
+              <span class="idx-panel__no" id="idxNo">01 / 08</span>
+              <img id="idxImg" src="../assets/arumdalu.jpg" alt="Kemasan Arumdalu abu-biru muda" width="1000" height="1000">
+              <span class="idx-panel__empty" id="idxEmpty" hidden>Foto menyusul</span>
+            </div>
+            <div class="idx-panel__info">
+              <h3 id="idxName">Arumdalu</h3>
+              <p class="notes" id="idxNotes">Lavender &middot; Sereh &middot; Jeruk</p>
+            </div>
+            <div class="idx-panel__acts">
+              <button class="btn btn--gold" type="button" id="idxOrder" data-en="Order this scent">Pesan varian ini</button>
+              <a class="btn btn--ghost" href="https://wa.me/6285155203672" data-en="Ask a question">Tanya dulu</a>
+            </div>
+            <p class="idx-hint" id="idxHint" data-en="Hover or tap a scent name to change the picture">Arahkan atau ketuk nama varian untuk mengganti gambar</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lanus" id="panel-lanus" role="tabpanel" aria-labelledby="tab-lanus">
+        <div class="lanus__grid">
+          <button class="lanus__row" type="button" data-order="Cendana" data-price="10000"><em>01</em><h3>Cendana</h3><p>Cendana &middot; Jeruk</p><div class="price">Rp10.000<span>Reseller Rp7.800</span></div></button>
+          <button class="lanus__row" type="button" data-order="Maharaja" data-price="10000"><em>02</em><h3>Maharaja</h3><p>Aroma khas</p><div class="price">Rp10.000<span>Reseller Rp7.800</span></div></button>
+          <button class="lanus__row" type="button" data-order="Melati" data-price="10000"><em>03</em><h3>Melati</h3><p>Melati &middot; Teh</p><div class="price">Rp10.000<span>Reseller Rp7.800</span></div></button>
+          <button class="lanus__row" type="button" data-order="Gaharu" data-price="10000"><em>04</em><h3>Gaharu</h3><p>Gaharu &middot; Kayu</p><div class="price">Rp10.000<span>Reseller Rp7.800</span></div></button>
+        </div>
+        <p class="lanus__note" data-en="Dupa Lanus is the everyday line: the same craft, a lighter price. Sold per pack for daily use and resale.">Dupa Lanus adalah lini harian: racikan yang sama, harga lebih ringan. Dijual per bungkus untuk pemakaian sehari-hari maupun dijual kembali.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec heritage" id="warisan">
+    <div class="wrap sec__in">
+      <div class="heritage__grid">
+        <div class="heritage__media">
+          <img src="../assets/abdi-dalem.jpg" alt="Dupa Abdi Dalem menyala di atas alas kayu" width="1000" height="1000">
+          <span class="seal"><img src="../assets/logo.jpg" alt=""></span>
+        </div>
+        <div>
+          <p class="eyebrow" data-en="Our heritage">Warisan kami</p>
+          <h2 data-en-html="Born from the rituals of <em>the Javanese palace</em>">Lahir dari ritual <em>keraton Jawa</em></h2>
+          <p data-en="Dupa Keraton draws on the beauty of Indonesian tradition — the same scents that once filled pendopo halls, now blended for the modern home and place of business.">Dupa Keraton menghadirkan pengalaman wewangian yang terinspirasi dari keindahan tradisi dan kekayaan budaya Nusantara — aroma yang dulu memenuhi pendopo, kini hadir untuk rumah dan tempat usaha masa kini.</p>
+          <p data-en="Every scent carries its own story and character. We bring together the value of tradition, the beauty of aroma, and a touch of elegance in one experience.">Kami percaya setiap aroma memiliki cerita dan karakter tersendiri. Karena itu Dupa Keraton memadukan nilai tradisi, keindahan aroma, dan sentuhan elegansi dalam satu pengalaman.</p>
+          <div class="quote">
+            <p data-en-html="&ldquo;Bringing the essence of Indonesian heritage into every scent.&rdquo;">&ldquo;Membawa esensi warisan Indonesia ke dalam setiap aroma.&rdquo;</p>
+            <span data-en="Dupa Keraton">Dupa Keraton</span>
+          </div>
+          <div class="values">
+            <div><h3 data-en="Traditional blend">Racikan tradisi</h3><p data-en="Recipes inspired by the fragrance culture of the archipelago.">Resep yang terinspirasi budaya wewangian Nusantara.</p></div>
+            <div><h3 data-en="Even burn">Bakar rata</h3><p data-en="Clean, steady smoke that lasts through the moment.">Asap bersih dan stabil, menemani sepanjang momen.</p></div>
+            <div><h3 data-en="Gift-ready">Siap hadiah</h3><p data-en="Packaging designed to be given, not just stored.">Kemasan yang layak diberikan, bukan hanya disimpan.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reseller">
+    <div class="wrap sec__in">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow" data-en="Wholesale &amp; export">Reseller &amp; ekspor</p>
+          <h2 style="margin-top:10px" data-en="A partner for shops and distributors">Mitra untuk toko dan distributor</h2>
+          <p data-en="We serve retail customers, resellers, distributors and business partners — with worldwide shipping from Indonesia.">Kami melayani pembeli eceran, reseller, distributor, dan mitra bisnis, dengan pengiriman ke berbagai negara dari Indonesia.</p>
+        </div>
+      </div>
+      <div class="b2b__grid">
+        <div class="b2b__cell">
+          <span class="num">01</span>
+          <h3 data-en="Retail">Eceran</h3>
+          <p data-en="Single packs, ideal for personal use or gifting.">Satuan, cocok untuk pemakaian pribadi atau hadiah.</p>
+          <span class="price"><span data-en="Keraton from">Keraton mulai</span> <b>Rp35.000</b></span>
+        </div>
+        <div class="b2b__cell">
+          <span class="num">02</span>
+          <h3 data-en="Reseller">Reseller</h3>
+          <p data-en="A dedicated reseller price for shops that resell our incense.">Harga khusus reseller untuk toko yang menjual kembali dupa kami.</p>
+          <span class="price"><span data-en="Keraton from">Keraton mulai</span> <b>Rp28.000</b></span>
+        </div>
+        <div class="b2b__cell">
+          <span class="num">03</span>
+          <h3 data-en="Export">Ekspor</h3>
+          <p data-en="International orders and distributor enquiries, handled directly over WhatsApp.">Pesanan internasional dan kerja sama distributor, dilayani langsung lewat WhatsApp.</p>
+          <span class="price"><span data-en="Tell us your country">Sebutkan negara Anda</span></span>
+        </div>
+      </div>
+      <div class="b2b__foot">
+        <p data-en="Tell us your country and the products you are interested in — we will reply with availability, shipping options and a wholesale quotation.">Sampaikan negara Anda dan produk yang diminati. Kami akan membalas dengan ketersediaan, opsi pengiriman, dan penawaran harga grosir.</p>
+        <a class="btn btn--gold" href="https://wa.me/6285155203672" data-en="Request a quotation">Minta penawaran</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="pesan">
+    <div class="wrap sec__in">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow" data-en="How to order">Cara pesan</p>
+          <h2 style="margin-top:10px" data-en="Three steps, one conversation">Tiga langkah, satu percakapan</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step"><h3 data-en="Choose your scent">Pilih aroma</h3><p data-en="Use the index above. Open a scent, set the quantity, and the order sheet writes your message for you.">Pakai indeks di atas. Buka satu aroma, tentukan jumlah, dan lembar pesanan menyusun pesannya untuk Anda.</p></div>
+        <div class="step"><h3 data-en="Message us">Hubungi kami</h3><p data-en="Send it over WhatsApp. We confirm stock, shipping cost and the total before payment.">Kirim lewat WhatsApp. Kami konfirmasi stok, ongkos kirim, dan total sebelum pembayaran.</p></div>
+        <div class="step"><h3 data-en="Receive &amp; enjoy">Terima &amp; nikmati</h3><p data-en="We pack, ship, and share the tracking details with you.">Kami kemas, kirim, dan bagikan nomor resi kepada Anda.</p></div>
+      </div>
+      <div class="b2b__foot" style="margin-top:44px">
+        <p data-en="Not sure which scent fits? Tell us the room and the moment, we will suggest two or three.">Belum yakin aroma mana yang cocok? Sebutkan ruangan dan momennya, kami bantu pilih dua atau tiga.</p>
+        <button class="btn btn--ghost" type="button" data-order="Arumdalu" data-price="35000" data-en="Open order sheet">Buka lembar pesanan</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="close">
+    <div class="wrap">
+      <p class="eyebrow" data-en="Dupa Keraton &mdash; Indonesia">Dupa Keraton &mdash; Indonesia</p>
+      <h2 data-en-html="Bring the warmth of <em>the archipelago</em> into your room">Hadirkan kehangatan <em>Nusantara</em> ke dalam ruang Anda</h2>
+      <p data-en="Retail, reseller, distributor or export enquiry — we answer personally.">Eceran, reseller, distributor, atau permintaan ekspor — kami membalas langsung.</p>
+      <div class="hero__acts">
+        <a class="btn btn--gold" href="https://wa.me/6285155203672">WhatsApp +62 851-5520-3672</a>
+        <a class="btn btn--ghost" href="#koleksi" data-en="See the collection">Lihat koleksi</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <div class="foot__brand"><img src="../assets/logo.jpg" alt=""><b>Dupa Keraton</b></div>
+        <p data-en="Authentic Indonesian incense, blended for ritual and everyday calm. Retail, reseller and worldwide shipping.">Dupa otentik Indonesia, diracik untuk ritual dan ketenangan sehari-hari. Eceran, reseller, dan pengiriman ke seluruh dunia.</p>
+      </div>
+      <div>
+        <h3 data-en="Collection">Koleksi</h3>
+        <p><a href="#koleksi" data-en="Scent index">Indeks aroma</a><br><a href="#koleksi" data-en="Dupa Lanus">Dupa Lanus</a><br><a href="#warisan" data-en="Heritage">Warisan</a></p>
+      </div>
+      <div>
+        <h3 data-en="Contact">Kontak</h3>
+        <p><a href="https://wa.me/6285155203672">WhatsApp +62 851-5520-3672</a><br><span data-en="Address, e-mail and social media to follow">Alamat, e-mail, dan media sosial menyusul</span></p>
+      </div>
+    </div>
+    <div class="foot__note">
+      <span>&copy; 2026 Dupa Keraton</span>
+      <span data-en="Mockup design &mdash; content pending client confirmation">Mockup desain &mdash; materi menunggu konfirmasi klien</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="orderDlg" aria-labelledby="dlgTitle">
+  <form method="dialog" class="sheet">
+    <button class="sheet__close" value="close" aria-label="Tutup">&times;</button>
+    <h3 id="dlgTitle" data-en="Order incense">Pesan dupa</h3>
+    <p class="sub" data-en="Sent to WhatsApp &mdash; no payment here">Diteruskan ke WhatsApp &mdash; tanpa pembayaran di sini</p>
+    <div class="sheet__row"><span data-en="Scent">Varian</span><strong id="dlgVariant">Arumdalu</strong></div>
+    <div class="sheet__row"><span data-en="Retail price">Harga eceran</span><strong id="dlgPrice">Rp35.000</strong></div>
+    <div class="sheet__row"><span data-en="Quantity">Jumlah</span>
+      <div class="qty">
+        <button type="button" id="dlgMinus" aria-label="Kurangi jumlah">&minus;</button>
+        <output id="dlgQty" aria-live="polite">1</output>
+        <button type="button" id="dlgPlus" aria-label="Tambah jumlah">+</button>
+      </div>
+    </div>
+    <div class="sheet__sum" id="dlgSum">Perkiraan total <b>Rp35.000</b></div>
+    <a class="btn btn--gold" id="dlgWa" href="https://wa.me/6285155203672"><span data-en="Send order">Kirim pesanan</span></a>
+    <p class="note" data-en="Stock, shipping and the final total are confirmed in chat.">Stok, ongkir, dan total akhir dikonfirmasi lewat chat.</p>
+  </form>
+</dialog>
+
+<script>
+(function(){
+  var hd = document.getElementById('hd');
+  var onScroll = function(){ hd.classList.toggle('is-stuck', window.scrollY > 20); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  var burger = document.getElementById('burger'), mnav = document.getElementById('mnav');
+  burger.addEventListener('click', function(){
+    var open = mnav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mnav.addEventListener('click', function(e){ if(e.target.tagName === 'A'){ mnav.classList.remove('is-open'); burger.setAttribute('aria-expanded','false'); }});
+
+  /* tabs */
+  var tabs = [document.getElementById('tab-keraton'), document.getElementById('tab-lanus')];
+  var panels = {keraton: document.getElementById('panel-keraton'), lanus: document.getElementById('panel-lanus')};
+  function show(key){
+    tabs.forEach(function(t){ t.setAttribute('aria-selected', t.id === 'tab-' + key ? 'true' : 'false'); });
+    panels.keraton.style.display = key === 'keraton' ? '' : 'none';
+    panels.lanus.classList.toggle('is-on', key === 'lanus');
+  }
+  tabs[0].addEventListener('click', function(){ show('keraton'); });
+  tabs[1].addEventListener('click', function(){ show('lanus'); });
+  tabs.forEach(function(t, i){
+    t.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
+        e.preventDefault();
+        var n = i === 0 ? 1 : 0;
+        tabs[n].focus(); show(n === 0 ? 'keraton' : 'lanus');
+      }
+    });
+  });
+
+  /* scent index */
+  var idxImg = document.getElementById('idxImg');
+  var idxName = document.getElementById('idxName');
+  var idxNotes = document.getElementById('idxNotes');
+  var idxNo = document.getElementById('idxNo');
+  var idxEmpty = document.getElementById('idxEmpty');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.idx-row'));
+  var active = 0, timer, currentScent = 'Arumdalu';
+
+  function select(row, idx){
+    if(idx === active && row.getAttribute('aria-current') === 'true') return;
+    active = idx;
+    currentScent = row.dataset.name;
+    rows.forEach(function(r){ r.removeAttribute('aria-current'); });
+    row.setAttribute('aria-current','true');
+    idxImg.classList.add('is-fading');
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+      if(row.dataset.img){
+        idxImg.src = row.dataset.img;
+        idxImg.alt = row.dataset.alt;
+        idxImg.style.visibility = 'visible';
+        idxEmpty.hidden = true;
+      } else {
+        idxImg.style.visibility = 'hidden';
+        idxEmpty.hidden = false;
+      }
+      idxName.textContent = row.dataset.name;
+      idxNotes.textContent = row.dataset.notes.replace(/·/g,'·');
+      idxNo.textContent = String(idx+1).padStart(2,'0') + ' / 08';
+      idxImg.classList.remove('is-fading');
+    }, 210);
+  }
+  rows.forEach(function(row, idx){
+    row.addEventListener('mouseenter', function(){ select(row, idx); });
+    row.addEventListener('focus', function(){ select(row, idx); });
+    row.addEventListener('click', function(){ select(row, idx); });
+  });
+
+  /* order dialog */
+  var dlg = document.getElementById('orderDlg');
+  var dlgVariant = document.getElementById('dlgVariant');
+  var dlgPrice = document.getElementById('dlgPrice');
+  var dlgQtyEl = document.getElementById('dlgQty');
+  var dlgSum = document.getElementById('dlgSum');
+  var dlgWa = document.getElementById('dlgWa');
+  var qty = 1, orderName = 'Arumdalu', orderPrice = 35000;
+
+  function fmt(n){ return 'Rp' + n.toLocaleString('id-ID'); }
+  function sync(){
+    dlgQtyEl.textContent = qty;
+    dlgSum.innerHTML = 'Perkiraan total <b>' + fmt(orderPrice * qty) + '</b> &middot; harga eceran';
+    dlgWa.href = 'https://wa.me/6285155203672?text=' + encodeURIComponent(
+      'Halo Dupa Keraton, saya ingin memesan ' + orderName + ' sebanyak ' + qty + ' bungkus (' + fmt(orderPrice) + ' per bungkus). Mohon info stok dan ongkos kirim.'
+    );
+  }
+  function openOrder(name, price){
+    orderName = name || 'Arumdalu';
+    orderPrice = price || 35000;
+    qty = 1;
+    dlgVariant.textContent = orderName;
+    dlgPrice.textContent = fmt(orderPrice);
+    sync();
+    if(typeof dlg.showModal === 'function'){ dlg.showModal(); } else { dlg.setAttribute('open',''); }
+  }
+  document.getElementById('idxOrder').addEventListener('click', function(){ openOrder(currentScent, 35000); });
+  document.querySelectorAll('[data-order]').forEach(function(el){
+    el.addEventListener('click', function(){ openOrder(el.dataset.order, Number(el.dataset.price) || 35000); });
+  });
+  document.getElementById('dlgPlus').addEventListener('click', function(){ qty = Math.min(99, qty + 1); sync(); });
+  document.getElementById('dlgMinus').addEventListener('click', function(){ qty = Math.max(1, qty - 1); sync(); });
+  dlg.addEventListener('click', function(e){ if(e.target === dlg){ dlg.close(); } });
+
+  /* language */
+  var idBtn = document.getElementById('lang-id'), enBtn = document.getElementById('lang-en');
+  var i18nNodes = Array.prototype.slice.call(document.querySelectorAll('[data-en]'));
+  var i18nHtml = Array.prototype.slice.call(document.querySelectorAll('[data-en-html]'));
+  i18nNodes.forEach(function(n){ n.dataset.id = n.innerHTML; });
+  i18nHtml.forEach(function(n){ n.dataset.id = n.innerHTML; });
+
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    idBtn.setAttribute('aria-pressed', lang === 'id' ? 'true' : 'false');
+    enBtn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+    i18nNodes.forEach(function(n){ n.innerHTML = lang === 'en' ? n.dataset.en : n.dataset.id; });
+    i18nHtml.forEach(function(n){ n.innerHTML = lang === 'en' ? n.dataset.enHtml : n.dataset.id; });
+    try { localStorage.setItem('dk-lang', lang); } catch(e){}
+  }
+  idBtn.addEventListener('click', function(){ setLang('id'); });
+  enBtn.addEventListener('click', function(){ setLang('en'); });
+})();
+</script>
+</body>
+</html>
