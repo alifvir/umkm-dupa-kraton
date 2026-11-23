@@ -3,164 +3,251 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dupa Keraton — Mockup (3 arah + rekomendasi)</title>
-<meta name="description" content="Tiga arah desain mockup untuk Dupa Keraton, dibandingkan berdampingan.">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Dupa Keraton — 4 Arah Mockup</title>
+<meta name="description" content="Empat arah desain mockup untuk Dupa Keraton: galeri pembanding, pratinjau, dan rekomendasi.">
+<meta name="theme-color" content="#F7F2E8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--ink:#15110D;--surface:#1D1712;--line:rgba(198,161,91,.24);--gold:#C6A15B;--cream:#F2E9DA;--muted:#B7A78F;--display:"Fraunces",Georgia,serif;--sans:"Plus Jakarta Sans",system-ui,sans-serif}
-body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
-img{display:block;width:100%;height:auto}
+:root{
+  --paper:#F7F2E8;
+  --paper-2:#EFE7D8;
+  --card:#FFFDF8;
+  --ink:#191410;
+  --ink-soft:#3E352B;
+  --muted:#7B705F;
+  --bronze:#9A7639;
+  --bronze-lt:#C3A063;
+  --line:#DFD4C0;
+  --line-soft:rgba(25,20,16,.09);
+  --display:"Fraunces",Georgia,serif;
+  --sans:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --wrap:1280px;
+  --pad:clamp(18px,4.4vw,56px);
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1200px;margin:0 auto;padding:clamp(24px,5vw,64px) clamp(18px,4vw,40px) 80px}
-header{padding-block:clamp(20px,5vw,52px) clamp(24px,4vw,40px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:12px;margin-bottom:28px}
-.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
-.brand b{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
-h1{font-family:var(--display);font-weight:300;font-size:clamp(34px,5.2vw,62px);line-height:1.02;letter-spacing:-.02em;max-width:18ch}
-h1 em{font-style:italic;color:var(--gold)}
-.lead{margin-top:18px;color:var(--muted);font-size:15px;max-width:62ch;line-height:1.8}
-.rec{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
-.rec div{border:1px solid var(--line);padding:14px 16px;border-radius:2px}
-.rec b{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:6px}
-.rec span{font-size:12.5px;color:var(--cream)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px);margin-top:clamp(32px,5vw,56px)}
-.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:0;margin-top:clamp(30px,4.5vw,48px);background:var(--surface);border:1px solid rgba(198,161,91,.45);border-radius:2px;overflow:hidden}
-.feature__shot{position:relative;min-height:320px;border-right:1px solid var(--line);overflow:hidden}
-.feature__shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
-.feature__body{padding:clamp(22px,3vw,38px);display:flex;flex-direction:column;gap:12px;justify-content:center}
-.feature__tag{display:inline-flex;align-self:flex-start;background:var(--gold);color:#1A1206;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px}
-.feature h2{font-family:var(--display);font-size:clamp(26px,3vw,36px);font-weight:400;line-height:1.12;letter-spacing:-.01em}
-.feature h2 em{font-style:italic;color:var(--gold)}
-.feature p{font-size:13.5px;color:var(--muted);line-height:1.75;max-width:52ch}
-.feature ul{list-style:none;display:grid;gap:6px;margin-top:2px}
-.feature li{font-size:12.5px;color:var(--cream);display:flex;gap:8px}
-.feature li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:7px;flex:0 0 auto}
-.feature .card__open{margin-top:8px;padding-top:0}
-@media (max-width:860px){.feature{grid-template-columns:1fr}.feature__shot{min-height:0;aspect-ratio:4/3;border-right:0;border-bottom:1px solid var(--line)}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s}
-.card:hover{transform:translateY(-3px);border-color:rgba(198,161,91,.5)}
-.card__shot{position:relative;aspect-ratio:3/4;overflow:hidden;background:#0F0C09;border-bottom:1px solid var(--line)}
-.card__shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
-.card__body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
-.card__no{font-size:10px;letter-spacing:.22em;color:var(--gold)}
-.card h2{font-family:var(--display);font-size:24px;font-weight:400;line-height:1.15;letter-spacing:.01em}
-.card p{font-size:12.5px;color:var(--muted);line-height:1.7}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
-.tags span{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:4px 8px;border-radius:2px;color:var(--muted)}
-.card__open{margin-top:auto;padding-top:14px;display:flex;gap:8px}
-.btn{flex:1;display:inline-flex;align-items:center;justify-content:center;height:42px;border-radius:2px;font-size:11px;letter-spacing:.1em;font-weight:500;transition:.2s}
-.btn--gold{background:var(--gold);color:#1A1206}
-.btn--gold:hover{background:#E7CB9B}
-.btn--ghost{border:1px solid var(--line);color:var(--cream)}
-.btn--ghost:hover{border-color:var(--gold);color:var(--gold)}
-.pair{margin-top:clamp(40px,6vw,72px)}
-.pair h2{font-family:var(--display);font-size:clamp(24px,3vw,34px);font-weight:300;letter-spacing:-.01em;margin-bottom:16px}
-.pair h2 em{font-style:italic;color:var(--gold)}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500}
-td:first-child{color:var(--muted);width:22%}
-.note{margin-top:36px;border-top:1px solid var(--line);padding-top:20px;font-size:12.5px;color:var(--muted);line-height:1.85;max-width:80ch}
-.note b{color:var(--cream);font-weight:500}
-@media (max-width:860px){.grid,.rec{grid-template-columns:1fr}.card__shot{aspect-ratio:16/10}.card__shot img{object-position:top}}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:26px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid var(--line);background:#F7E9D2}
+.brand b{display:block;font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.brand span span{display:block;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.top__meta{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-align:right;line-height:1.9}
+
+/* hero */
+.hero{padding-block:clamp(34px,5vw,62px) clamp(24px,3vw,36px);display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,4vw,56px);align-items:end}
+.count{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px 6px 8px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+.count b{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--bronze);color:#FFF9EE;font-size:12px;letter-spacing:0}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,5.6vw,68px);line-height:1.02;letter-spacing:-.025em;margin-top:18px}
+h1 em{font-style:italic;color:var(--bronze)}
+.lead{margin-top:18px;font-size:15px;line-height:1.8;color:var(--ink-soft);max-width:54ch}
+.hero__side{border-left:1px solid var(--line);padding-left:clamp(16px,2vw,28px)}
+.hero__side dl{display:grid;gap:12px}
+.hero__side div{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding-bottom:9px;border-bottom:1px solid var(--line-soft)}
+.hero__side dt{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.hero__side dd{font-size:13px;color:var(--ink);font-weight:400;text-align:right}
+
+/* grid of four */
+.grid-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-top:clamp(18px,3vw,28px);border-top:1px solid var(--ink);margin-bottom:clamp(18px,2.6vw,26px)}
+.grid-head h2{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-weight:400;letter-spacing:-.01em}
+.grid-head p{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,20px)}
+.card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-3px);border-color:var(--bronze-lt);box-shadow:0 14px 30px rgba(43,33,22,.10)}
+.card.is-rec{border-color:var(--bronze);box-shadow:0 0 0 1px var(--bronze) inset}
+.card__ribbon{position:absolute;z-index:3;top:10px;left:10px;background:var(--bronze);color:#FFF9EE;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:5px 9px;border-radius:2px}
+.card__no{position:absolute;z-index:2;top:10px;right:10px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:50%;font-family:var(--display);font-size:13px;color:var(--ink)}
+.card__shot{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--paper-2);border-bottom:1px solid var(--line)}
+.card__shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s ease}
+.card:hover .card__shot img{transform:scale(1.02)}
+.card__body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:7px;flex:1}
+.card h3{font-family:var(--display);font-size:clamp(17px,1.5vw,21px);font-weight:500;line-height:1.18;letter-spacing:-.005em}
+.card p{font-size:11.5px;line-height:1.65;color:var(--ink-soft)}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:1px}
+.tags span{font-size:8px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:3px 6px;border-radius:2px;color:var(--muted);background:var(--paper)}
+.card__open{margin-top:auto;padding-top:12px;display:flex;gap:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 12px;border-radius:2px;font-size:10px;letter-spacing:.1em;font-weight:500;transition:.2s;white-space:nowrap}
+.btn--solid{flex:1;background:var(--ink);color:var(--paper)}
+.btn--solid:hover{background:#2E251C}
+.btn--gold{flex:1;background:var(--bronze);color:#FFF9EE}
+.btn--gold:hover{background:#8A6832}
+.btn--ghost{border:1px solid var(--line);color:var(--ink-soft)}
+.btn--ghost:hover{border-color:var(--bronze);color:var(--bronze)}
+
+/* compare */
+.compare{margin-top:clamp(34px,5vw,58px);border-top:1px solid var(--ink);padding-top:18px}
+.compare__head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:14px}
+.compare h2{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-weight:400;letter-spacing:-.01em}
+.compare h2 em{font-style:italic;color:var(--bronze)}
+.compare p{font-size:11px;letter-spacing:.06em;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+thead th{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze);font-weight:600;border-bottom:1px solid var(--line)}
+tbody td:first-child{color:var(--muted);width:19%;font-size:11px;letter-spacing:.02em}
+tbody tr:last-child td{border-bottom:1px solid var(--line)}
+.col-rec{background:rgba(154,118,57,.07)}
+
+/* note */
+.note{margin-top:32px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--bronze);border-radius:3px;padding:clamp(18px,2.4vw,26px)}
+.note h3{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze);font-weight:600;margin-bottom:10px}
+.note p{font-size:12.5px;line-height:1.85;color:var(--ink-soft);max-width:88ch}
+.note p+p{margin-top:10px}
+.note b{color:var(--ink);font-weight:500}
+
+.foot{margin-top:clamp(30px,4vw,46px);padding-block:22px 34px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+@media (max-width:1180px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .card__shot{aspect-ratio:4/3}
+}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:26px;align-items:start}
+  .hero__side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:16px}
+  .hero__side dl{grid-template-columns:1fr 1fr;gap:10px 24px}
+  .grid-head{flex-direction:column;gap:6px}
+  table{font-size:11.5px}
+  th,td{padding:9px 6px}
+  tbody td:first-child{width:26%}
+}
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr;gap:14px}
+  .card__shot{aspect-ratio:16/10}
+  .top{flex-wrap:wrap;gap:10px}
+  .top__meta{text-align:left}
+  .hero__side dl{grid-template-columns:1fr}
+  .compare{overflow-x:auto}
+  table{min-width:680px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div class="brand"><img src="assets/logo.jpg" alt=""><b>Dupa Keraton &middot; Mockup</b></div>
-    <h1>Tiga arah desain, <em>satu brand</em></h1>
-    <p class="lead">Semua memakai foto produk, logo, nama varian, dan harga dari katalog klien. Tiap arah mengambil kutub desain yang berbeda — bukan tiga versi dari tampilan yang sama. Di bawah ini ada <strong style="color:var(--cream);font-weight:500">arah 04</strong>, gabungan yang saya rekomendasikan.</p>
-    <div class="rec">
-      <div><b>01 Keraton Heritage</b><span>Mewah, gelap, berwibawa. Paling kuat untuk reseller &amp; ekspor.</span></div>
-      <div><b>02 Editorial Ivory</b><span>Bersih, tajam, seperti katalog seni. Paling kuat untuk pasar premium baru.</span></div>
-      <div><b>03 Ritual Nusantara</b><span>Hangat dan bercerita. Paling kuat untuk pembeli langsung &amp; medsos.</span></div>
+
+  <header class="top">
+    <div class="brand">
+      <img src="assets/logo.jpg" alt="">
+      <span><b>Dupa Keraton</b><span>Mockup &middot; 2026</span></span>
     </div>
+    <p class="top__meta">4 arah desain &middot; 1 rekomendasi<br>Eceran &middot; Reseller &middot; Ekspor</p>
   </header>
 
-  <section class="feature">
-    <div class="feature__shot"><img src="preview/04-desktop.jpg" alt="Pratinjau varian 04, gabungan rekomendasi"></div>
-    <div class="feature__body">
-      <span class="feature__tag">Rekomendasi &middot; arah 04</span>
-      <h2>Gabungan: <em>Keraton Heritage</em> + indeks 02 + modal 03</h2>
-      <p>Fondasi visual dari arah 01, katalog diganti indeks aroma interaktif dari arah 02, dan pemesanan memakai lembar pesanan dari arah 03. Satu halaman, tiga kekuatan.</p>
-      <ul>
-        <li>Hero arch, emas di atas hitam, toggle ID/EN</li>
-        <li>Indeks aroma: hover/ketuk nama, gambar besar berganti</li>
-        <li>Modal pesanan: varian + jumlah, total langsung, lanjut ke WhatsApp</li>
-        <li>Tab Dupa Lanus dengan harga reseller</li>
-      </ul>
-      <div class="card__open">
-        <a class="btn btn--gold" href="04-rekomendasi/index.html" target="_blank" rel="noopener">Buka mockup 04</a>
-        <a class="btn btn--ghost" href="preview/04-desktop.jpg" target="_blank" rel="noopener">Pratinjau</a>
-      </div>
+  <section class="hero">
+    <div>
+      <span class="count"><b>4</b> mockup siap dibandingkan</span>
+      <h1>Empat arah desain, <em>satu brand</em></h1>
+      <p class="lead">Semua memakai foto produk, logo, nama varian, dan harga dari katalog klien. Tiap arah mengambil kutub desain yang berbeda — bukan empat versi dari tampilan yang sama. Klik salah satu kartu untuk membukanya.</p>
+    </div>
+    <div class="hero__side">
+      <dl>
+        <div><dt>Varian</dt><dd>8 Keraton &middot; 4 Lanus</dd></div>
+        <div><dt>Harga</dt><dd>Rp35.000 / Rp10.000</dd></div>
+        <div><dt>Bahasa</dt><dd>Indonesia &amp; Inggris</dd></div>
+        <div><dt>Kontak</dt><dd>WhatsApp klien</dd></div>
+      </dl>
     </div>
   </section>
 
+  <div class="grid-head">
+    <h2>Pilih arah yang ingin dilihat</h2>
+    <p>01 &mdash; 04</p>
+  </div>
+
   <div class="grid">
     <article class="card">
-      <div class="card__shot"><img src="preview/01-desktop.jpg" alt="Pratinjau varian 01 Keraton Heritage"></div>
+      <span class="card__no">01</span>
+      <div class="card__shot"><img src="preview/01-desktop.jpg" alt="Pratinjau mockup 01 Keraton Heritage" width="820"></div>
       <div class="card__body">
-        <span class="card__no">ARAH 01</span>
-        <h2>Keraton Heritage</h2>
-        <p>Hitam hangat, emas, ornamen lengkung seperti logo. Hero berbingkai arch, katalog gelap, panel reseller/ekspor, dan tombol bahasa ID/EN.</p>
+        <h3>Keraton Heritage</h3>
+        <p>Hitam hangat, emas, bingkai lengkung seperti logo. Paling berwibawa untuk reseller dan ekspor.</p>
         <div class="tags"><span>Dark luxe</span><span>B2B</span><span>ID/EN</span></div>
         <div class="card__open">
-          <a class="btn btn--gold" href="01-keraton-heritage/index.html" target="_blank" rel="noopener">Buka mockup</a>
-          <a class="btn btn--ghost" href="preview/01-desktop.jpg" target="_blank" rel="noopener">Pratinjau</a>
+          <a class="btn btn--solid" href="01-keraton-heritage/index.html" target="_blank" rel="noopener">Buka mockup</a>
+          <a class="btn btn--ghost" href="preview/01-desktop.jpg" target="_blank" rel="noopener" aria-label="Pratinjau mockup 01">Pratinjau</a>
         </div>
       </div>
     </article>
+
     <article class="card">
-      <div class="card__shot"><img src="preview/02-desktop.jpg" alt="Pratinjau varian 02 Editorial Ivory"></div>
+      <span class="card__no">02</span>
+      <div class="card__shot"><img src="preview/02-desktop.jpg" alt="Pratinjau mockup 02 Editorial Ivory" width="820"></div>
       <div class="card__body">
-        <span class="card__no">ARAH 02</span>
-        <h2>Editorial Ivory</h2>
-        <p>Kertas gading, tipografi serif besar, garis rambut, radius tajam. Indeks aroma interaktif: arahkan nama varian, gambarnya berganti. Ada lembar pesanan yang menyusun pesan WhatsApp.</p>
+        <h3>Editorial Ivory</h3>
+        <p>Kertas gading, serif besar, garis rambut. Indeks aroma yang berganti gambar saat disentuh.</p>
         <div class="tags"><span>Editorial</span><span>Interaktif</span><span>Tajam</span></div>
         <div class="card__open">
-          <a class="btn btn--gold" href="02-editorial-ivory/index.html" target="_blank" rel="noopener">Buka mockup</a>
-          <a class="btn btn--ghost" href="preview/02-desktop.jpg" target="_blank" rel="noopener">Pratinjau</a>
+          <a class="btn btn--solid" href="02-editorial-ivory/index.html" target="_blank" rel="noopener">Buka mockup</a>
+          <a class="btn btn--ghost" href="preview/02-desktop.jpg" target="_blank" rel="noopener" aria-label="Pratinjau mockup 02">Pratinjau</a>
         </div>
       </div>
     </article>
+
     <article class="card">
-      <div class="card__shot"><img src="preview/03-desktop.jpg" alt="Pratinjau varian 03 Ritual Nusantara"></div>
+      <span class="card__no">03</span>
+      <div class="card__shot"><img src="preview/03-desktop.jpg" alt="Pratinjau mockup 03 Ritual Nusantara" width="820"></div>
       <div class="card__body">
-        <span class="card__no">ARAH 03</span>
-        <h2>Ritual Nusantara</h2>
-        <p>Terracotta, pasir, dan krem. Satu section satu adegan, bab varian bergambar, band Dupa Lanus gelap, dan modal pesanan yang langsung menyiapkan chat WhatsApp.</p>
-        <div class="tags"><span>Storytelling</span><span>Hangat</span><span>Mobile-first</span></div>
+        <h3>Ritual Nusantara</h3>
+        <p>Terracotta dan pasir. Satu section satu adegan, bab varian bergambar, pesanan lewat modal.</p>
+        <div class="tags"><span>Storytelling</span><span>Hangat</span><span>Mobile</span></div>
         <div class="card__open">
-          <a class="btn btn--gold" href="03-ritual-nusantara/index.html" target="_blank" rel="noopener">Buka mockup</a>
-          <a class="btn btn--ghost" href="preview/03-desktop.jpg" target="_blank" rel="noopener">Pratinjau</a>
+          <a class="btn btn--solid" href="03-ritual-nusantara/index.html" target="_blank" rel="noopener">Buka mockup</a>
+          <a class="btn btn--ghost" href="preview/03-desktop.jpg" target="_blank" rel="noopener" aria-label="Pratinjau mockup 03">Pratinjau</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card is-rec">
+      <span class="card__ribbon">Rekomendasi</span>
+      <span class="card__no">04</span>
+      <div class="card__shot"><img src="preview/04-desktop.jpg" alt="Pratinjau mockup 04, gabungan rekomendasi" width="820"></div>
+      <div class="card__body">
+        <h3>Gabungan 01 + 02 + 03</h3>
+        <p>Fondasi visual 01, katalog jadi indeks aroma 02, pemesanan pakai modal 03. Satu halaman utuh.</p>
+        <div class="tags"><span>Rekomendasi</span><span>Lengkap</span><span>Siap pakai</span></div>
+        <div class="card__open">
+          <a class="btn btn--gold" href="04-rekomendasi/index.html" target="_blank" rel="noopener">Buka mockup</a>
+          <a class="btn btn--ghost" href="preview/04-desktop.jpg" target="_blank" rel="noopener" aria-label="Pratinjau mockup 04">Pratinjau</a>
         </div>
       </div>
     </article>
   </div>
 
-  <section class="pair">
-    <h2>Perbandingan <em>cepat</em></h2>
+  <section class="compare">
+    <div class="compare__head">
+      <h2>Perbandingan <em>cepat</em></h2>
+      <p>Empat kolom, satu baris per aspek</p>
+    </div>
     <table>
-      <thead><tr><th>Aspek</th><th>01 Keraton Heritage</th><th>02 Editorial Ivory</th><th>03 Ritual Nusantara</th></tr></thead>
+      <thead>
+        <tr><th>Aspek</th><th>01 Keraton Heritage</th><th>02 Editorial Ivory</th><th>03 Ritual Nusantara</th><th class="col-rec">04 Gabungan</th></tr>
+      </thead>
       <tbody>
-        <tr><td>Kesan</td><td>Mewah, berwibawa, eksklusif</td><td>Tenang, cerdas, seperti galeri</td><td>Hangat, personal, bercerita</td></tr>
-        <tr><td>Warna</td><td>Hitam hangat + emas + krem</td><td>Gading + tinta + perunggu</td><td>Terracotta + pasir + krem</td></tr>
-        <tr><td>Tipografi</td><td>Fraunces + Plus Jakarta Sans</td><td>Instrument Serif + Plus Jakarta Sans</td><td>Cormorant Garamond + Plus Jakarta Sans</td></tr>
-        <tr><td>Kekuatan</td><td>Kredibilitas reseller &amp; ekspor</td><td>Katalog aroma terasa mahal</td><td>Kedekatan dengan pembeli langsung</td></tr>
-        <tr><td>Interaksi</td><td>Tab koleksi, toggle ID/EN</td><td>Indeks hover + lembar pesanan</td><td>Modal pesanan per varian</td></tr>
-        <tr><td>Risiko</td><td>Bisa terasa berat untuk pembeli satuan</td><td>Terlalu sunyi jika foto sedikit</td><td>Kurang formal untuk distributor besar</td></tr>
+        <tr><td>Kesan</td><td>Mewah, berwibawa</td><td>Tenang, seperti galeri</td><td>Hangat, personal</td><td class="col-rec">Mewah sekaligus mudah dipakai</td></tr>
+        <tr><td>Warna</td><td>Hitam hangat + emas</td><td>Gading + perunggu</td><td>Terracotta + pasir</td><td class="col-rec">Hitam hangat + emas</td></tr>
+        <tr><td>Katalog</td><td>Grid kartu</td><td>Indeks aroma</td><td>Bab bercerita</td><td class="col-rec">Indeks aroma</td></tr>
+        <tr><td>Pemesanan</td><td>WhatsApp per kartu</td><td>Lembar pesanan</td><td>Modal per varian</td><td class="col-rec">Modal + total otomatis</td></tr>
+        <tr><td>Paling kuat untuk</td><td>Reseller &amp; ekspor</td><td>Pasar premium baru</td><td>Pembeli langsung</td><td class="col-rec">Klien yang ingin satu halaman</td></tr>
       </tbody>
     </table>
   </section>
 
-  <p class="note">
-    <b>Rekomendasi:</b> bangun dari <b>arah 04</b> — fondasi visual 01, indeks aroma 02, lembar pesanan 03.
-    Ia menjaga kesan "keraton" sekaligus memudahkan pembeli memilih aroma dan memesan dalam dua klik.
-    Semua mockup memakai nomor WhatsApp dari materi klien (+62 851-5520-3672).
-    Yang masih perlu dilengkapi pemilik: alamat, e-mail resmi, akun media sosial, foto kemasan Maharaja dan lini Lanus, serta konfirmasi nama "Melati" vs "Melati Jawa" pada kemasan.
-  </p>
+  <div class="note">
+    <h3>Catatan serah terima</h3>
+    <p><b>Rekomendasi:</b> bangun dari mockup <b>04</b> — fondasi visual 01, indeks aroma 02, lembar pesanan 03. Ia menjaga kesan "keraton" sekaligus memudahkan pembeli memilih aroma dan memesan.</p>
+    <p><b>Perlu dilengkapi pemilik:</b> alamat toko, e-mail resmi, akun media sosial, foto kemasan Maharaja dan lini Lanus, serta konfirmasi nama "Melati" vs "Melati Jawa" pada kemasan. Nomor WhatsApp yang dipakai di semua mockup: +62 851-5520-3672.</p>
+  </div>
+
+  <footer class="foot">
+    <span>&copy; 2026 Dupa Keraton &middot; mockup desain</span>
+    <span>4 arah &middot; materi menunggu konfirmasi klien</span>
+  </footer>
 </div>
 </body>
 </html>
