@@ -160,17 +160,20 @@ select{width:100%;height:40px;border:1px solid var(--line);border-radius:2px;bac
 .sheet.is-flash{animation:flash 1.1s ease}
 @keyframes flash{0%,100%{box-shadow:0 0 0 0 rgba(106,91,57,0)}25%{box-shadow:0 0 0 3px rgba(106,91,57,.22)}}
 
-/* lanus strip */
+/* lanus line */
 .lanus{margin-top:clamp(26px,3.4vw,38px);border-top:1px solid var(--line);padding-top:18px}
-.lanus__head{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.lanus__head{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;justify-content:space-between;margin-bottom:14px}
 .lanus__head h3{font-family:var(--display);font-size:21px;font-weight:500}
-.lanus__head p{font-size:12px;color:var(--muted)}
-.lrow{display:grid;grid-template-columns:28px 1fr auto auto;gap:14px;align-items:center;padding-block:11px;border-bottom:1px solid var(--line-soft)}
-.lrow em{font-family:var(--display);font-style:normal;font-size:11px;color:var(--accent-deep)}
-.lrow span.nm{font-size:13px}
-.lrow .p{font-size:11.5px;color:var(--ink-soft);text-align:right;white-space:nowrap}
-.lrow button{font-size:10px;letter-spacing:.08em;border:1px solid var(--line);border-radius:2px;padding:7px 12px;color:var(--ink-soft);transition:.2s}
-.lrow button:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.lanus__head p{font-size:12px;color:var(--muted);max-width:54ch;line-height:1.6}
+.lanus__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.3vw,16px)}
+.card--mini .card__body{padding:10px 10px 11px;gap:2px}
+.card--mini h3{font-size:15px}
+.card--mini .card__notes{font-size:8px;letter-spacing:.12em}
+.card--mini .card__price{display:block;padding-top:8px}
+.card--mini .card__price b{display:block;font-size:11.5px}
+.card--mini .card__price span{display:block;font-size:9px;margin-top:1px}
+.card--mini .card__order{height:30px;margin-top:8px;font-size:9.5px}
+.card--mini .card__idx{top:6px;left:6px;font-size:8px;padding:3px 5px}
 
 /* heritage */
 .heritage{background:var(--paper);border-block:1px solid var(--line)}
@@ -264,9 +267,8 @@ dialog::backdrop{background:rgba(43,40,31,.5);backdrop-filter:blur(3px)}
   .hero__acts .btn{flex:1 1 100%}
   .hero__facts div{padding-right:16px;margin-right:16px}
   .foot__grid{grid-template-columns:1fr}
-  .lrow{grid-template-columns:22px 1fr auto;gap:10px}
-  .lrow .p{grid-column:2;text-align:left}
-  .lrow button{grid-row:1;grid-column:3}
+  .lanus__grid{grid-template-columns:repeat(2,1fr)}
+  .card--mini .card__media{aspect-ratio:1/1}
   .sec-head{flex-direction:column;align-items:flex-start;gap:6px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -411,12 +413,38 @@ dialog::backdrop{background:rgba(43,40,31,.5);backdrop-filter:blur(3px)}
           <div class="lanus">
             <div class="lanus__head">
               <h3 data-en="Dupa Lanus — everyday line">Dupa Lanus &mdash; lini harian</h3>
-              <p data-en="Same craft, lighter price. Reseller 7.800.">Racikan sama, harga lebih ringan. Reseller Rp7.800.</p>
+              <p data-en="Economical line for daily use and resale — 35 sticks per pack. Reseller 7.800.">Lini ekonomis untuk pemakaian harian dan dijual kembali &mdash; 35 stik per bungkus. Reseller Rp7.800.</p>
             </div>
-            <div class="lrow"><em>01</em><span class="nm">Cendana</span><span class="p">Rp10.000 &middot; reseller 7.800</span><button type="button" data-pick="Cendana" data-line="lanus">Pesan</button></div>
-            <div class="lrow"><em>02</em><span class="nm">Maharaja</span><span class="p">Rp10.000 &middot; reseller 7.800</span><button type="button" data-pick="Maharaja" data-line="lanus">Pesan</button></div>
-            <div class="lrow"><em>03</em><span class="nm">Melati</span><span class="p">Rp10.000 &middot; reseller 7.800</span><button type="button" data-pick="Melati" data-line="lanus">Pesan</button></div>
-            <div class="lrow"><em>04</em><span class="nm">Gaharu</span><span class="p">Rp10.000 &middot; reseller 7.800</span><button type="button" data-pick="Gaharu" data-line="lanus">Pesan</button></div>
+            <div class="lanus__grid">
+              <article class="card card--mini">
+                <div class="card__media"><span class="card__idx">L1</span><img src="../assets/lanus-cendana.jpg" alt="Dus Dupa Lanus Cendana dengan batang dupa dan serpihan kayu cendana" width="1000" height="1000"></div>
+                <div class="card__body"><h3>Cendana</h3><p class="card__notes">35 stik &middot; 35 g</p>
+                  <div class="card__price"><b>Rp10.000</b><span>Reseller 7.800</span></div>
+                  <button class="card__order" type="button" data-pick="Cendana" data-line="lanus">Pesan
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+              </article>
+              <article class="card card--mini">
+                <div class="card__media"><span class="card__idx">L2</span><img src="../assets/lanus-maharaja.jpg" alt="Dus Dupa Lanus Maharaja dengan batang dupa dan rangkaian bunga di atas janur" width="1000" height="1000"></div>
+                <div class="card__body"><h3>Maharaja</h3><p class="card__notes">35 stik &middot; 35 g</p>
+                  <div class="card__price"><b>Rp10.000</b><span>Reseller 7.800</span></div>
+                  <button class="card__order" type="button" data-pick="Maharaja" data-line="lanus">Pesan
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+              </article>
+              <article class="card card--mini">
+                <div class="card__media"><span class="card__idx">L3</span><img src="../assets/lanus-melati.jpg" alt="Dus Dupa Lanus Melati dengan batang dupa dan bunga melati" width="1000" height="1000"></div>
+                <div class="card__body"><h3>Melati</h3><p class="card__notes">35 stik &middot; 35 g</p>
+                  <div class="card__price"><b>Rp10.000</b><span>Reseller 7.800</span></div>
+                  <button class="card__order" type="button" data-pick="Melati" data-line="lanus">Pesan
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+              </article>
+              <article class="card card--mini">
+                <div class="card__media tile-empty"><span>Foto menyusul</span></div>
+                <div class="card__body"><h3>Gaharu</h3>
+                  <div class="card__price"><b>Rp10.000</b><span>Reseller 7.800</span></div>
+                  <button class="card__order" type="button" data-pick="Gaharu" data-line="lanus">Pesan
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+              </article>
+            </div>
           </div>
         </div>
 
